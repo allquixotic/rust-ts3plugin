@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ConnectionProperties` enum in crate `ts3plugin_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ConnectionProperties">
+
+    <title>ts3plugin_sys::public_definitions::ConnectionProperties - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>public_definitions</a></p><script>window.sidebarCurrent = {name: 'ConnectionProperties', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>public_definitions</a>::<wbr><a class='enum' href=''>ConnectionProperties</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-584' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#518-607' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum ConnectionProperties {
+    Ping,
+    PingDeciation,
+    ConnectedTime,
+    IdleTime,
+    ClientIp,
+    ClientPort,
+    ServerIp,
+    ServerPort,
+    PacketsSentSpeech,
+    PacketsSentKeepalive,
+    PacketsSentControl,
+    PacketsSentTotal,
+    BytesSentSpeech,
+    BytesSentKeepalive,
+    BytesSentControl,
+    BytesSentTotal,
+    PacketsReceivedSpeech,
+    PacketsReceivedKeepalive,
+    PacketsReceivedControl,
+    PacketsReceivedTotal,
+    BytesReceivedSpeech,
+    BytesReceivedKeepalive,
+    BytesReceivedControl,
+    BytesReceivedTotal,
+    PacketlossSpeech,
+    PacketlossKeepalive,
+    PacketlossControl,
+    PacketlossTotal,
+    Server2ClientPacketlossSpeech,
+    Server2ClientPacketlossKeepalive,
+    Server2ClientPacketlossControl,
+    Server2ClientPacketlossTotal,
+    Client2ServerPacketlossSpeech,
+    Client2ServerPacketlossKeepalive,
+    Client2ServerPacketlossControl,
+    Client2ServerPacketlossTotal,
+    BandwidthSentLastSecondSpeech,
+    BandwidthSentLastSecondKeepalive,
+    BandwidthSentLastSecondControl,
+    BandwidthSentLastSecondTotal,
+    BandwidthSentLastMinuteSpeech,
+    BandwidthSentLastMinuteKeepalive,
+    BandwidthSentLastMinuteControl,
+    BandwidthSentLastMinuteTotal,
+    BandwidthReceivedLastSecondSpeech,
+    BandwidthReceivedLastSecondKeepalive,
+    BandwidthReceivedLastSecondControl,
+    BandwidthReceivedLastSecondTotal,
+    BandwidthReceivedLastMinuteSpeech,
+    BandwidthReceivedLastMinuteKeepalive,
+    BandwidthReceivedLastMinuteControl,
+    BandwidthReceivedLastMinuteTotal,
+    Dummy0,
+    Dummy1,
+    Dummy2,
+    Dummy3,
+    Dummy4,
+    Dummy5,
+    Dummy6,
+    Dummy7,
+    Dummy8,
+    Dummy9,
+    FileTransferBandwidthSent,
+    FiletransferBandwidthReceived,
+    FiletransferBytesReceivedTotal,
+    FiletransferBytesSentTotal,
+    Endmarker,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Ping'><code>Ping</code></td><td><div class='docblock'><p>Average latency for a round trip through and back this connection</p>
+</div></td></tr><tr><td id='variant.PingDeciation'><code>PingDeciation</code></td><td><div class='docblock'><p>Standard deviation of the above average latency</p>
+</div></td></tr><tr><td id='variant.ConnectedTime'><code>ConnectedTime</code></td><td><div class='docblock'><p>How long the connection exists already</p>
+</div></td></tr><tr><td id='variant.IdleTime'><code>IdleTime</code></td><td><div class='docblock'><p>How long since the last action of this client</p>
+</div></td></tr><tr><td id='variant.ClientIp'><code>ClientIp</code></td><td><div class='docblock'><p>IP of this client (as seen from the server side)</p>
+</div></td></tr><tr><td id='variant.ClientPort'><code>ClientPort</code></td><td><div class='docblock'><p>Port of this client (as seen from the server side)</p>
+</div></td></tr><tr><td id='variant.ServerIp'><code>ServerIp</code></td><td><div class='docblock'><p>IP of the server (seen from the client side) - only available on yourself, not for remote clients, not available server side</p>
+</div></td></tr><tr><td id='variant.ServerPort'><code>ServerPort</code></td><td><div class='docblock'><p>Port of the server (seen from the client side) - only available on yourself, not for remote clients, not available server side</p>
+</div></td></tr><tr><td id='variant.PacketsSentSpeech'><code>PacketsSentSpeech</code></td><td><div class='docblock'><p>How many Speech packets were sent through this connection</p>
+</div></td></tr><tr><td id='variant.PacketsSentKeepalive'><code>PacketsSentKeepalive</code></td><td></td></tr><tr><td id='variant.PacketsSentControl'><code>PacketsSentControl</code></td><td></td></tr><tr><td id='variant.PacketsSentTotal'><code>PacketsSentTotal</code></td><td><div class='docblock'><p>How many packets were sent totally (this is PACKETS_SENT_SPEECH + PACKETS_SENT_KEEPALIVE + PACKETS_SENT_CONTROL)</p>
+</div></td></tr><tr><td id='variant.BytesSentSpeech'><code>BytesSentSpeech</code></td><td></td></tr><tr><td id='variant.BytesSentKeepalive'><code>BytesSentKeepalive</code></td><td></td></tr><tr><td id='variant.BytesSentControl'><code>BytesSentControl</code></td><td></td></tr><tr><td id='variant.BytesSentTotal'><code>BytesSentTotal</code></td><td></td></tr><tr><td id='variant.PacketsReceivedSpeech'><code>PacketsReceivedSpeech</code></td><td></td></tr><tr><td id='variant.PacketsReceivedKeepalive'><code>PacketsReceivedKeepalive</code></td><td></td></tr><tr><td id='variant.PacketsReceivedControl'><code>PacketsReceivedControl</code></td><td></td></tr><tr><td id='variant.PacketsReceivedTotal'><code>PacketsReceivedTotal</code></td><td></td></tr><tr><td id='variant.BytesReceivedSpeech'><code>BytesReceivedSpeech</code></td><td></td></tr><tr><td id='variant.BytesReceivedKeepalive'><code>BytesReceivedKeepalive</code></td><td></td></tr><tr><td id='variant.BytesReceivedControl'><code>BytesReceivedControl</code></td><td></td></tr><tr><td id='variant.BytesReceivedTotal'><code>BytesReceivedTotal</code></td><td></td></tr><tr><td id='variant.PacketlossSpeech'><code>PacketlossSpeech</code></td><td></td></tr><tr><td id='variant.PacketlossKeepalive'><code>PacketlossKeepalive</code></td><td></td></tr><tr><td id='variant.PacketlossControl'><code>PacketlossControl</code></td><td></td></tr><tr><td id='variant.PacketlossTotal'><code>PacketlossTotal</code></td><td><div class='docblock'><p>The probability with which a packet round trip failed because a packet was lost</p>
+</div></td></tr><tr><td id='variant.Server2ClientPacketlossSpeech'><code>Server2ClientPacketlossSpeech</code></td><td><div class='docblock'><p>The probability with which a speech packet failed from the server to the client</p>
+</div></td></tr><tr><td id='variant.Server2ClientPacketlossKeepalive'><code>Server2ClientPacketlossKeepalive</code></td><td></td></tr><tr><td id='variant.Server2ClientPacketlossControl'><code>Server2ClientPacketlossControl</code></td><td></td></tr><tr><td id='variant.Server2ClientPacketlossTotal'><code>Server2ClientPacketlossTotal</code></td><td></td></tr><tr><td id='variant.Client2ServerPacketlossSpeech'><code>Client2ServerPacketlossSpeech</code></td><td></td></tr><tr><td id='variant.Client2ServerPacketlossKeepalive'><code>Client2ServerPacketlossKeepalive</code></td><td></td></tr><tr><td id='variant.Client2ServerPacketlossControl'><code>Client2ServerPacketlossControl</code></td><td></td></tr><tr><td id='variant.Client2ServerPacketlossTotal'><code>Client2ServerPacketlossTotal</code></td><td></td></tr><tr><td id='variant.BandwidthSentLastSecondSpeech'><code>BandwidthSentLastSecondSpeech</code></td><td><div class='docblock'><p>Howmany bytes of speech packets we sent during the last second</p>
+</div></td></tr><tr><td id='variant.BandwidthSentLastSecondKeepalive'><code>BandwidthSentLastSecondKeepalive</code></td><td></td></tr><tr><td id='variant.BandwidthSentLastSecondControl'><code>BandwidthSentLastSecondControl</code></td><td></td></tr><tr><td id='variant.BandwidthSentLastSecondTotal'><code>BandwidthSentLastSecondTotal</code></td><td></td></tr><tr><td id='variant.BandwidthSentLastMinuteSpeech'><code>BandwidthSentLastMinuteSpeech</code></td><td><div class='docblock'><p>Howmany bytes/s of speech packets we sent in average during the last minute</p>
+</div></td></tr><tr><td id='variant.BandwidthSentLastMinuteKeepalive'><code>BandwidthSentLastMinuteKeepalive</code></td><td></td></tr><tr><td id='variant.BandwidthSentLastMinuteControl'><code>BandwidthSentLastMinuteControl</code></td><td></td></tr><tr><td id='variant.BandwidthSentLastMinuteTotal'><code>BandwidthSentLastMinuteTotal</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastSecondSpeech'><code>BandwidthReceivedLastSecondSpeech</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastSecondKeepalive'><code>BandwidthReceivedLastSecondKeepalive</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastSecondControl'><code>BandwidthReceivedLastSecondControl</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastSecondTotal'><code>BandwidthReceivedLastSecondTotal</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastMinuteSpeech'><code>BandwidthReceivedLastMinuteSpeech</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastMinuteKeepalive'><code>BandwidthReceivedLastMinuteKeepalive</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastMinuteControl'><code>BandwidthReceivedLastMinuteControl</code></td><td></td></tr><tr><td id='variant.BandwidthReceivedLastMinuteTotal'><code>BandwidthReceivedLastMinuteTotal</code></td><td></td></tr><tr><td id='variant.Dummy0'><code>Dummy0</code></td><td><div class='docblock'><p>Rare properties</p>
+</div></td></tr><tr><td id='variant.Dummy1'><code>Dummy1</code></td><td></td></tr><tr><td id='variant.Dummy2'><code>Dummy2</code></td><td></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td></tr><tr><td id='variant.Dummy8'><code>Dummy8</code></td><td></td></tr><tr><td id='variant.Dummy9'><code>Dummy9</code></td><td></td></tr><tr><td id='variant.FileTransferBandwidthSent'><code>FileTransferBandwidthSent</code></td><td><div class='docblock'><p>How many bytes per second are currently being sent by file transfers</p>
+</div></td></tr><tr><td id='variant.FiletransferBandwidthReceived'><code>FiletransferBandwidthReceived</code></td><td><div class='docblock'><p>Bow many bytes per second are currently being received by file transfers</p>
+</div></td></tr><tr><td id='variant.FiletransferBytesReceivedTotal'><code>FiletransferBytesReceivedTotal</code></td><td><div class='docblock'><p>How many bytes we received in total through file transfers</p>
+</div></td></tr><tr><td id='variant.FiletransferBytesSentTotal'><code>FiletransferBytesSentTotal</code></td><td><div class='docblock'><p>How many bytes we sent in total through file transfers</p>
+</div></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard Shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search Tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "ts3plugin_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

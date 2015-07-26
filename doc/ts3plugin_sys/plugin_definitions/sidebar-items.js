@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["HOTKEY_BUFSZ",""],["MENU_BUFSZ",""]],"enum":[["ConfigureOffer","Return values for offersConfigure"],["ConnectTab",""],["GuiProfile",""],["ItemType",""],["MenuType",""],["MessageTarget",""]],"struct":[["BookmarkItem",""],["BookmarkList",""],["Hotkey",""],["MenuItem",""]]});

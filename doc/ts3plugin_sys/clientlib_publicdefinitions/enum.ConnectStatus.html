@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ConnectStatus` enum in crate `ts3plugin_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ConnectStatus">
+
+    <title>ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>clientlib_publicdefinitions</a></p><script>window.sidebarCurrent = {name: 'ConnectStatus', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>clientlib_publicdefinitions</a>::<wbr><a class='enum' href=''>ConnectStatus</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-14' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14-26' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum ConnectStatus {
+    Disconnected,
+    Connecting,
+    Connected,
+    ConnectionEstablishing,
+    ConnectionEstablished,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Disconnected'><code>Disconnected</code></td><td><div class='docblock'><p>There is no activity to the server, this is the default value</p>
+</div></td></tr><tr><td id='variant.Connecting'><code>Connecting</code></td><td><div class='docblock'><p>We are trying to connect, we haven&#39;t got a clientID yet, we haven&#39;t been accepted by the server</p>
+</div></td></tr><tr><td id='variant.Connected'><code>Connected</code></td><td><div class='docblock'><p>The server has accepted us, we can talk and hear and we got a clientID, but we don&#39;t have the channels and clients yet, we can get server infos (welcome msg etc.)</p>
+</div></td></tr><tr><td id='variant.ConnectionEstablishing'><code>ConnectionEstablishing</code></td><td><div class='docblock'><p>We are CONNECTED and we are visible</p>
+</div></td></tr><tr><td id='variant.ConnectionEstablished'><code>ConnectionEstablished</code></td><td><div class='docblock'><p>We are CONNECTED and we have the client and channels available</p>
+</div></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard Shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search Tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "ts3plugin_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

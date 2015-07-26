@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Ts3Functions","Functions exported to plugin from main binary"]]});

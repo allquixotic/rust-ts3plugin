@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Plugin` trait in crate `ts3plugin`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Plugin">
+
+    <title>ts3plugin::Plugin - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>ts3plugin</a></p><script>window.sidebarCurrent = {name: 'Plugin', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>ts3plugin</a>::<wbr><a class='trait' href=''>Plugin</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-202' class='srclink' href='../src/ts3plugin/lib.rs.html#60-78' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Plugin {
+    fn <a href='#tymethod.init' class='fnname'>init</a>(&amp;mut self) -&gt; <a class='enum' href='../ts3plugin/enum.InitResult.html' title='ts3plugin::InitResult'>InitResult</a>;
+    fn <a href='#tymethod.shutdown' class='fnname'>shutdown</a>(&amp;mut self);
+
+    fn <a href='#method.offers_configure' class='fnname'>offers_configure</a>(&amp;self) -&gt; <a class='enum' href='../ts3plugin_sys/plugin_definitions/enum.ConfigureOffer.html' title='ts3plugin_sys::plugin_definitions::ConfigureOffer'>ConfigureOffer</a> { ... }
+}</pre><div class='docblock'><p>The trait that has to be implemented by a plugin. To enhance a library to a
+working TeamSpeak plugin you have to call the macro <code>create_plugin!</code>
+afterwards.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1>
+<p>A fully working example that creates a plugin that does nothing:</p>
+<pre class='rust rust-example-rendered'>
+<span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>box_raw</span>)]</span>
+<span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>ts3plugin</span>;
+
+<span class='kw'>use</span> <span class='ident'>ts3plugin</span>::<span class='op'>*</span>;
+
+<span class='kw'>struct</span> <span class='ident'>MyTsPlugin</span>;
+
+<span class='kw'>impl</span> <span class='ident'>Plugin</span> <span class='kw'>for</span> <span class='ident'>MyTsPlugin</span>
+{
+    <span class='kw'>fn</span> <span class='ident'>init</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>InitResult</span>
+    {
+        <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;Inited&quot;</span>);
+        <span class='ident'>InitResult</span>::<span class='ident'>Success</span>
+    }
+
+    <span class='kw'>fn</span> <span class='ident'>shutdown</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>)
+    {
+        <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;Shutdown&quot;</span>);
+    }
+}
+
+<span class='macro'>create_plugin</span><span class='macro'>!</span>(<span class='string'>&quot;My Ts Plugin\0&quot;</span>, <span class='string'>&quot;0.1.0\0&quot;</span>, <span class='string'>&quot;My Name\0&quot;</span>,
+    <span class='string'>&quot;A wonderful tiny example plugin\0&quot;</span>, <span class='ident'>MyTsPlugin</span>);
+</pre>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.init' class='method stab '><code>fn <a href='#tymethod.init' class='fnname'>init</a>(&amp;mut self) -&gt; <a class='enum' href='../ts3plugin/enum.InitResult.html' title='ts3plugin::InitResult'>InitResult</a></code></h3><div class='docblock'><p>Custom code called right after loading the plugin.</p>
+</div><h3 id='tymethod.shutdown' class='method stab '><code>fn <a href='#tymethod.shutdown' class='fnname'>shutdown</a>(&amp;mut self)</code></h3><div class='docblock'><p>Custom code called right before the plugin is unloaded.</p>
+
+<p>Note:</p>
+
+<p>If your plugin implements a settings dialog, it must be closed and
+deleted here, else the TeamSpeak client will most likely crash (library
+removed but dialog from the library code is still used).</p>
+</div></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.offers_configure' class='method stab '><code>fn <a href='#method.offers_configure' class='fnname'>offers_configure</a>(&amp;self) -&gt; <a class='enum' href='../ts3plugin_sys/plugin_definitions/enum.ConfigureOffer.html' title='ts3plugin_sys::plugin_definitions::ConfigureOffer'>ConfigureOffer</a></code></h3><div class='docblock'><p>Tell client if plugin offers a configuration window.
+If this function is not overwritten, ConfigureOffer::No is returned.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    </ul><script type="text/javascript" async
+                              src="../implementors/ts3plugin/trait.Plugin.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard Shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search Tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "ts3plugin";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
