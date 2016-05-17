@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::plugin_definitions::BookmarkItem - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,21 +44,21 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>plugin_definitions</a>::<wbr><a class='struct' href=''>BookmarkItem</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-50' class='srclink' href='../../src/ts3plugin_sys/plugin_definitions.rs.html#63-70' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-177' class='srclink' href='../../src/ts3plugin_sys/plugin_definitions.rs.html#66-73' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct BookmarkItem {
-    pub name: <a href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut <a class='type' href='../../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a></a>,
-    pub is_folder: <a href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
-    pub reserved: <a href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[<a href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>; 3]</a>,
-    pub uuid_folder: <a href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut <a class='type' href='../../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a></a>,
+    pub name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a>,
+    pub is_folder: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub reserved: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 3]</a>,
+    pub uuid_folder: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a>,
 }</pre><h2 class='fields'>Fields</h2>
 <table><tr class='stab '>
-                                  <td id='structfield.name'><code>name</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.is_folder'><code>is_folder</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.reserved'><code>reserved</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.uuid_folder'><code>uuid_folder</code></td><td><div class='docblock'><p>Is either &quot;char *uuid&quot; or &quot;BookmarkList *folder&quot;</p>
+                             <td id='structfield.name'><code>name</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.is_folder'><code>is_folder</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.reserved'><code>reserved</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.uuid_folder'><code>uuid_folder</code></td><td><div class='docblock'><p>Is either &quot;char *uuid&quot; or &quot;BookmarkList *folder&quot;</p>
 </div></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
@@ -100,7 +102,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -116,6 +118,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

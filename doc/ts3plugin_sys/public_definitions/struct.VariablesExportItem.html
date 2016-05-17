@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::public_definitions::VariablesExportItem - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,25 +44,25 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>public_definitions</a>::<wbr><a class='struct' href=''>VariablesExportItem</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-490' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#722-732' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1414' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#743-753' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct VariablesExportItem {
-    pub item_is_valid: <a href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
-    pub proposed_is_set: <a href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
-    pub current: <a href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const <a class='type' href='../../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a></a>,
-    pub proposed: <a href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const <a class='type' href='../../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a></a>,
+    pub item_is_valid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub proposed_is_set: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub current: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a>,
+    pub proposed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a>,
 }</pre><div class='docblock'><p>Some structs to handle variables in callbacks</p>
 </div><h2 class='fields'>Fields</h2>
 <table><tr class='stab '>
-                                  <td id='structfield.item_is_valid'><code>item_is_valid</code></td><td><div class='docblock'><p>This item has valid values. ignore this item if 0</p>
+                             <td id='structfield.item_is_valid'><code>item_is_valid</code></td><td><div class='docblock'><p>This item has valid values. ignore this item if 0</p>
 </div></td></tr><tr class='stab '>
-                                  <td id='structfield.proposed_is_set'><code>proposed_is_set</code></td><td><div class='docblock'><p>The value in proposed is set. if 0 ignore proposed</p>
+                             <td id='structfield.proposed_is_set'><code>proposed_is_set</code></td><td><div class='docblock'><p>The value in proposed is set. if 0 ignore proposed</p>
 </div></td></tr><tr class='stab '>
-                                  <td id='structfield.current'><code>current</code></td><td><div class='docblock'><p>Current value (stored in memory)</p>
+                             <td id='structfield.current'><code>current</code></td><td><div class='docblock'><p>Current value (stored in memory)</p>
 </div></td></tr><tr class='stab '>
-                                  <td id='structfield.proposed'><code>proposed</code></td><td><div class='docblock'><p>New value to change to (const, so no updates please)</p>
+                             <td id='structfield.proposed'><code>proposed</code></td><td><div class='docblock'><p>New value to change to (const, so no updates please)</p>
 </div></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
@@ -104,7 +106,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -120,6 +122,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

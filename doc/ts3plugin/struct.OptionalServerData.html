@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `OptionalServerData` struct in crate `ts3plugin`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, OptionalServerData">
+
+    <title>ts3plugin::OptionalServerData - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>ts3plugin</a></p><script>window.sidebarCurrent = {name: 'OptionalServerData', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>ts3plugin</a>::<wbr><a class='struct' href=''>OptionalServerData</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-763' class='srclink' href='../src/ts3plugin/home/sebi/Dokumente/Freizeit/Programmieren/Rust/ts3plugin/target/debug/build/ts3plugin-6bbd1a4ba72abc90/out/structs.rs.html#2-44' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct OptionalServerData {
+    // some fields omitted
+}</pre><div class='docblock'><p>Server properties that have to be fetched explicitely</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../ts3plugin/struct.OptionalServerData.html' title='ts3plugin::OptionalServerData'>OptionalServerData</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-837' class='srclink' href='../src/ts3plugin/home/sebi/Dokumente/Freizeit/Programmieren/Rust/ts3plugin/target/debug/build/ts3plugin-6bbd1a4ba72abc90/out/structs.rs.html#84-208' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_welcome_message' class='method'><code>fn <a href='#method.get_welcome_message' class='fnname'>get_welcome_message</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<h4 id='method.get_max_clients' class='method'><code>fn <a href='#method.get_max_clients' class='fnname'>get_max_clients</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_clients_online' class='method'><code>fn <a href='#method.get_clients_online' class='fnname'>get_clients_online</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_channels_online' class='method'><code>fn <a href='#method.get_channels_online' class='fnname'>get_channels_online</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_client_connections' class='method'><code>fn <a href='#method.get_client_connections' class='fnname'>get_client_connections</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_query_client_connections' class='method'><code>fn <a href='#method.get_query_client_connections' class='fnname'>get_query_client_connections</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_query_clients_online' class='method'><code>fn <a href='#method.get_query_clients_online' class='fnname'>get_query_clients_online</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_uptime' class='method'><code>fn <a href='#method.get_uptime' class='fnname'>get_uptime</a>(&amp;self) -&gt; <a class='struct' href='../time/duration/struct.Duration.html' title='time::duration::Duration'>Duration</a></code></h4>
+<h4 id='method.get_password' class='method'><code>fn <a href='#method.get_password' class='fnname'>get_password</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_max_download_total_bandwith' class='method'><code>fn <a href='#method.get_max_download_total_bandwith' class='fnname'>get_max_download_total_bandwith</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_max_upload_total_bandwith' class='method'><code>fn <a href='#method.get_max_upload_total_bandwith' class='fnname'>get_max_upload_total_bandwith</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_download_quota' class='method'><code>fn <a href='#method.get_download_quota' class='fnname'>get_download_quota</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_upload_quota' class='method'><code>fn <a href='#method.get_upload_quota' class='fnname'>get_upload_quota</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_month_bytes_downloaded' class='method'><code>fn <a href='#method.get_month_bytes_downloaded' class='fnname'>get_month_bytes_downloaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_month_bytes_uploaded' class='method'><code>fn <a href='#method.get_month_bytes_uploaded' class='fnname'>get_month_bytes_uploaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_total_bytes_downloaded' class='method'><code>fn <a href='#method.get_total_bytes_downloaded' class='fnname'>get_total_bytes_downloaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_total_bytes_uploaded' class='method'><code>fn <a href='#method.get_total_bytes_uploaded' class='fnname'>get_total_bytes_uploaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_complain_autoban_count' class='method'><code>fn <a href='#method.get_complain_autoban_count' class='fnname'>get_complain_autoban_count</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_complain_autoban_time' class='method'><code>fn <a href='#method.get_complain_autoban_time' class='fnname'>get_complain_autoban_time</a>(&amp;self) -&gt; <a class='struct' href='../time/duration/struct.Duration.html' title='time::duration::Duration'>Duration</a></code></h4>
+<h4 id='method.get_complain_remove_time' class='method'><code>fn <a href='#method.get_complain_remove_time' class='fnname'>get_complain_remove_time</a>(&amp;self) -&gt; <a class='struct' href='../time/duration/struct.Duration.html' title='time::duration::Duration'>Duration</a></code></h4>
+<h4 id='method.get_min_clients_in_channel_before_forced_silence' class='method'><code>fn <a href='#method.get_min_clients_in_channel_before_forced_silence' class='fnname'>get_min_clients_in_channel_before_forced_silence</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_antiflood_points_tick_reduce' class='method'><code>fn <a href='#method.get_antiflood_points_tick_reduce' class='fnname'>get_antiflood_points_tick_reduce</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_antiflood_points_needed_command_block' class='method'><code>fn <a href='#method.get_antiflood_points_needed_command_block' class='fnname'>get_antiflood_points_needed_command_block</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_antiflood_points_needed_ip_block' class='method'><code>fn <a href='#method.get_antiflood_points_needed_ip_block' class='fnname'>get_antiflood_points_needed_ip_block</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_port' class='method'><code>fn <a href='#method.get_port' class='fnname'>get_port</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_autostart' class='method'><code>fn <a href='#method.get_autostart' class='fnname'>get_autostart</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_machine_id' class='method'><code>fn <a href='#method.get_machine_id' class='fnname'>get_machine_id</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_needed_identity_security_level' class='method'><code>fn <a href='#method.get_needed_identity_security_level' class='fnname'>get_needed_identity_security_level</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_log_client' class='method'><code>fn <a href='#method.get_log_client' class='fnname'>get_log_client</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_log_query' class='method'><code>fn <a href='#method.get_log_query' class='fnname'>get_log_query</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_log_channel' class='method'><code>fn <a href='#method.get_log_channel' class='fnname'>get_log_channel</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_log_permissions' class='method'><code>fn <a href='#method.get_log_permissions' class='fnname'>get_log_permissions</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_log_server' class='method'><code>fn <a href='#method.get_log_server' class='fnname'>get_log_server</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_log_filetransfer' class='method'><code>fn <a href='#method.get_log_filetransfer' class='fnname'>get_log_filetransfer</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.get_min_client_version' class='method'><code>fn <a href='#method.get_min_client_version' class='fnname'>get_min_client_version</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<h4 id='method.get_total_packetloss_speech' class='method'><code>fn <a href='#method.get_total_packetloss_speech' class='fnname'>get_total_packetloss_speech</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_total_packetloss_keepalive' class='method'><code>fn <a href='#method.get_total_packetloss_keepalive' class='fnname'>get_total_packetloss_keepalive</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_total_packetloss_control' class='method'><code>fn <a href='#method.get_total_packetloss_control' class='fnname'>get_total_packetloss_control</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_total_packetloss_total' class='method'><code>fn <a href='#method.get_total_packetloss_total' class='fnname'>get_total_packetloss_total</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_total_ping' class='method'><code>fn <a href='#method.get_total_ping' class='fnname'>get_total_ping</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h4>
+<h4 id='method.get_weblist_enabled' class='method'><code>fn <a href='#method.get_weblist_enabled' class='fnname'>get_weblist_enabled</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "ts3plugin";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

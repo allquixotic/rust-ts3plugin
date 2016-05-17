@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::plugin_definitions::MenuItem - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,21 +44,21 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>plugin_definitions</a>::<wbr><a class='struct' href=''>MenuItem</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-42' class='srclink' href='../../src/ts3plugin_sys/plugin_definitions.rs.html#47-53' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-165' class='srclink' href='../../src/ts3plugin_sys/plugin_definitions.rs.html#50-56' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct MenuItem {
     pub type_name: <a class='enum' href='../../ts3plugin_sys/plugin_definitions/enum.MenuType.html' title='ts3plugin_sys::plugin_definitions::MenuType'>MenuType</a>,
-    pub id: <a class='type' href='../../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
-    pub text: <a href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[<a class='type' href='../../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a>; MENU_BUFSZ]</a>,
-    pub icon: <a href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[<a class='type' href='../../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a>; MENU_BUFSZ]</a>,
+    pub id: <a class='type' href='../../libc/type.c_uint.html' title='libc::c_uint'>c_uint</a>,
+    pub text: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; MENU_BUFSZ]</a>,
+    pub icon: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; MENU_BUFSZ]</a>,
 }</pre><h2 class='fields'>Fields</h2>
 <table><tr class='stab '>
-                                  <td id='structfield.type_name'><code>type_name</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.id'><code>id</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.text'><code>text</code></td><td></td></tr><tr class='stab '>
-                                  <td id='structfield.icon'><code>icon</code></td><td></td></tr></table></section>
+                             <td id='structfield.type_name'><code>type_name</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.id'><code>id</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.text'><code>text</code></td><td></td></tr><tr class='stab '>
+                             <td id='structfield.icon'><code>icon</code></td><td></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -99,7 +101,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -115,6 +117,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

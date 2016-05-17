@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["InitError",""]],"trait":[["Plugin","The trait that has to be implemented by a plugin. To enhance a library to a working TeamSpeak plugin you have to call the macro `create_plugin!` afterwards."]]});

@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,10 +44,10 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>clientlib_publicdefinitions</a>::<wbr><a class='enum' href=''>ConnectStatus</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-12' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14-26' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-33' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#15-26' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum ConnectStatus {
     Disconnected,
     Connecting,
@@ -53,12 +55,22 @@
     ConnectionEstablishing,
     ConnectionEstablished,
 }</pre><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.Disconnected'><code>Disconnected</code></td><td><div class='docblock'><p>There is no activity to the server, this is the default value</p>
-</div></td></tr><tr><td id='variant.Connecting'><code>Connecting</code></td><td><div class='docblock'><p>We are trying to connect, we haven&#39;t got a clientID yet, we haven&#39;t been accepted by the server</p>
-</div></td></tr><tr><td id='variant.Connected'><code>Connected</code></td><td><div class='docblock'><p>The server has accepted us, we can talk and hear and we got a clientID, but we don&#39;t have the channels and clients yet, we can get server infos (welcome msg etc.)</p>
-</div></td></tr><tr><td id='variant.ConnectionEstablishing'><code>ConnectionEstablishing</code></td><td><div class='docblock'><p>We are CONNECTED and we are visible</p>
-</div></td></tr><tr><td id='variant.ConnectionEstablished'><code>ConnectionEstablished</code></td><td><div class='docblock'><p>We are CONNECTED and we have the client and channels available</p>
-</div></td></tr></table></section>
+<table class='variants_table'><tr><td id='variant.Disconnected'><code>Disconnected</code></td><td><div class='docblock'><p>There is no activity to the server, this is the default value</p>
+</div></td><td></td></tr><tr><td id='variant.Connecting'><code>Connecting</code></td><td><div class='docblock'><p>We are trying to connect, we haven&#39;t got a clientID yet, we haven&#39;t been accepted by the server</p>
+</div></td><td></td></tr><tr><td id='variant.Connected'><code>Connected</code></td><td><div class='docblock'><p>The server has accepted us, we can talk and hear and we got a clientID, but we don&#39;t have the channels and clients yet, we can get server infos (welcome msg etc.)</p>
+</div></td><td></td></tr><tr><td id='variant.ConnectionEstablishing'><code>ConnectionEstablishing</code></td><td><div class='docblock'><p>We are CONNECTED and we are visible</p>
+</div></td><td></td></tr><tr><td id='variant.ConnectionEstablished'><code>ConnectionEstablished</code></td><td><div class='docblock'><p>We are CONNECTED and we have the client and channels available</p>
+</div></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-40' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-41' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-44' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-47' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../ts3plugin_sys/clientlib_publicdefinitions/enum.ConnectStatus.html' title='ts3plugin_sys::clientlib_publicdefinitions::ConnectStatus'>ConnectStatus</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-53' class='srclink' href='../../src/ts3plugin_sys/clientlib_publicdefinitions.rs.html#14' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -101,7 +113,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -117,6 +129,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

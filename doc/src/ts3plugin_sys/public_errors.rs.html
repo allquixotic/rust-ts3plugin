@@ -9,7 +9,9 @@
 
     <title>public_errors.rs.html -- source</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -288,8 +290,8 @@
 
 <span class='doccomment'>//! This file contains the definitions of public_erros.h and public_erros_rare.h</span>
 
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Eq</span>, <span class='ident'>PartialEq</span>)]</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>u32</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Error</span>
 {
     <span class='doccomment'>/// General</span>
@@ -571,7 +573,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -587,6 +589,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

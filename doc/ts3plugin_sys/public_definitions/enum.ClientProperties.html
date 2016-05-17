@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::public_definitions::ClientProperties - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,10 +44,10 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>public_definitions</a>::<wbr><a class='enum' href=''>ClientProperties</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-211' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#236-356' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-668' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#248-368' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum ClientProperties {
     UniqueIdentifier,
     Nickname,
@@ -54,7 +56,7 @@
     FlagTalking,
     InputMuted,
     OutputMuted,
-    OutputonlyMuted,
+    OutputOnlyMuted,
     InputHardware,
     OutputHardware,
     InputDeactivated,
@@ -110,62 +112,72 @@
     Badges,
     Endmarker,
 }</pre><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.UniqueIdentifier'><code>UniqueIdentifier</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, can be used to identify this particular client installation</p>
-</div></td></tr><tr><td id='variant.Nickname'><code>Nickname</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.Version'><code>Version</code></td><td><div class='docblock'><p>For other clients than ourself, this needs to be requested (=&gt; requestClientVariables)</p>
-</div></td></tr><tr><td id='variant.Platform'><code>Platform</code></td><td><div class='docblock'><p>For other clients than ourself, this needs to be requested (=&gt; requestClientVariables)</p>
-</div></td></tr><tr><td id='variant.FlagTalking'><code>FlagTalking</code></td><td><div class='docblock'><p>Automatically up-to-date for any client that can be heard (in room / whisper)</p>
-</div></td></tr><tr><td id='variant.InputMuted'><code>InputMuted</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients microphone mute status</p>
-</div></td></tr><tr><td id='variant.OutputMuted'><code>OutputMuted</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients headphones/speakers/mic combined mute status</p>
-</div></td></tr><tr><td id='variant.OutputonlyMuted'><code>OutputonlyMuted</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients headphones/speakers only mute status</p>
-</div></td></tr><tr><td id='variant.InputHardware'><code>InputHardware</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients microphone hardware status (is the capture device opened?)</p>
-</div></td></tr><tr><td id='variant.OutputHardware'><code>OutputHardware</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients headphone/speakers hardware status (is the playback device opened?)</p>
-</div></td></tr><tr><td id='variant.InputDeactivated'><code>InputDeactivated</code></td><td><div class='docblock'><p>Only usable for ourself, not propagated to the network</p>
-</div></td></tr><tr><td id='variant.IdleTime'><code>IdleTime</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.DefaultChannel'><code>DefaultChannel</code></td><td><div class='docblock'><p>Only usable for ourself, the default channel we used to connect on our last connection attempt</p>
-</div></td></tr><tr><td id='variant.DefaultChannelPassword'><code>DefaultChannelPassword</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.ServerPassword'><code>ServerPassword</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.MetaData'><code>MetaData</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, not used by TeamSpeak, free storage for sdk users</p>
-</div></td></tr><tr><td id='variant.IsMuted'><code>IsMuted</code></td><td><div class='docblock'><p>Only make sense on the client side locally, &quot;1&quot; if this client is currently muted by us, &quot;0&quot; if he is not</p>
-</div></td></tr><tr><td id='variant.IsRecording'><code>IsRecording</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.VolumeModificator'><code>VolumeModificator</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.VersionSign'><code>VersionSign</code></td><td><div class='docblock'><p>Sign</p>
-</div></td></tr><tr><td id='variant.SecurityHash'><code>SecurityHash</code></td><td><div class='docblock'><p>SDK use, not used by teamspeak. Hash is provided by an outside source. A channel will use the security salt + other client data to calculate a hash, which must be the same as the one provided here.</p>
-</div></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td><div class='docblock'><p>Rare properties</p>
-</div></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td></tr><tr><td id='variant.Dummy8'><code>Dummy8</code></td><td></td></tr><tr><td id='variant.Dummy9'><code>Dummy9</code></td><td></td></tr><tr><td id='variant.KeyOffset'><code>KeyOffset</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.LastVarRequest'><code>LastVarRequest</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.LoginName'><code>LoginName</code></td><td><div class='docblock'><p>Used for serverquery clients, makes no sense on normal clients currently</p>
-</div></td></tr><tr><td id='variant.LoginPassword'><code>LoginPassword</code></td><td><div class='docblock'><p>Used for serverquery clients, makes no sense on normal clients currently</p>
-</div></td></tr><tr><td id='variant.DatabaseId'><code>DatabaseId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds database client id</p>
-</div></td></tr><tr><td id='variant.ChannelGroupId'><code>ChannelGroupId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds database client id</p>
-</div></td></tr><tr><td id='variant.Servergroups'><code>Servergroups</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds all servergroups client belongs too</p>
-</div></td></tr><tr><td id='variant.Created'><code>Created</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables), first time this client connected to this server</p>
-</div></td></tr><tr><td id='variant.Lastconnected'><code>Lastconnected</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables), last time this client connected to this server</p>
-</div></td></tr><tr><td id='variant.Totalconnections'><code>Totalconnections</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables), how many times this client connected to this server</p>
-</div></td></tr><tr><td id='variant.Away'><code>Away</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients away status</p>
-</div></td></tr><tr><td id='variant.AwayMessage'><code>AwayMessage</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients away status</p>
-</div></td></tr><tr><td id='variant.Type'><code>Type</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, determines if this is a real client or a server-query connection</p>
-</div></td></tr><tr><td id='variant.FlagAvatar'><code>FlagAvatar</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this client got an avatar</p>
-</div></td></tr><tr><td id='variant.TalkPower'><code>TalkPower</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds database client id</p>
-</div></td></tr><tr><td id='variant.TalkRequest'><code>TalkRequest</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds timestamp where client requested to talk</p>
-</div></td></tr><tr><td id='variant.TalkRequestMsg'><code>TalkRequestMsg</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds matter for the request</p>
-</div></td></tr><tr><td id='variant.Description'><code>Description</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.IsTalker'><code>IsTalker</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.MonthBytesUploaded'><code>MonthBytesUploaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
-</div></td></tr><tr><td id='variant.MonthBytesDownloaded'><code>MonthBytesDownloaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
-</div></td></tr><tr><td id='variant.TotalBytesUploaded'><code>TotalBytesUploaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
-</div></td></tr><tr><td id='variant.TotalBytesDownloaded'><code>TotalBytesDownloaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
-</div></td></tr><tr><td id='variant.IsPrioritySpeaker'><code>IsPrioritySpeaker</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.UnreadMessages'><code>UnreadMessages</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.NicknamePhonetic'><code>NicknamePhonetic</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.NeededServerqueryViewPower'><code>NeededServerqueryViewPower</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.DefaultToken'><code>DefaultToken</code></td><td><div class='docblock'><p>Only usable for ourself, the default token we used to connect on our last connection attempt</p>
-</div></td></tr><tr><td id='variant.IconId'><code>IconId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.IsChannelCommander'><code>IsChannelCommander</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.Country'><code>Country</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
-</div></td></tr><tr><td id='variant.ChannelGroupInheritedChannelId'><code>ChannelGroupInheritedChannelId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, contains channel_id where the channel_group_id is set from</p>
-</div></td></tr><tr><td id='variant.Badges'><code>Badges</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, stores icons for partner badges</p>
-</div></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td></tr></table></section>
+<table class='variants_table'><tr><td id='variant.UniqueIdentifier'><code>UniqueIdentifier</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, can be used to identify this particular client installation</p>
+</div></td><td></td></tr><tr><td id='variant.Nickname'><code>Nickname</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.Version'><code>Version</code></td><td><div class='docblock'><p>For other clients than ourself, this needs to be requested (=&gt; requestClientVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.Platform'><code>Platform</code></td><td><div class='docblock'><p>For other clients than ourself, this needs to be requested (=&gt; requestClientVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.FlagTalking'><code>FlagTalking</code></td><td><div class='docblock'><p>Automatically up-to-date for any client that can be heard (in room / whisper)</p>
+</div></td><td></td></tr><tr><td id='variant.InputMuted'><code>InputMuted</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients microphone mute status</p>
+</div></td><td></td></tr><tr><td id='variant.OutputMuted'><code>OutputMuted</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients headphones/speakers/mic combined mute status</p>
+</div></td><td></td></tr><tr><td id='variant.OutputOnlyMuted'><code>OutputOnlyMuted</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients headphones/speakers only mute status</p>
+</div></td><td></td></tr><tr><td id='variant.InputHardware'><code>InputHardware</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients microphone hardware status (is the capture device opened?)</p>
+</div></td><td></td></tr><tr><td id='variant.OutputHardware'><code>OutputHardware</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients headphone/speakers hardware status (is the playback device opened?)</p>
+</div></td><td></td></tr><tr><td id='variant.InputDeactivated'><code>InputDeactivated</code></td><td><div class='docblock'><p>Only usable for ourself, not propagated to the network</p>
+</div></td><td></td></tr><tr><td id='variant.IdleTime'><code>IdleTime</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultChannel'><code>DefaultChannel</code></td><td><div class='docblock'><p>Only usable for ourself, the default channel we used to connect on our last connection attempt</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultChannelPassword'><code>DefaultChannelPassword</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.ServerPassword'><code>ServerPassword</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.MetaData'><code>MetaData</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, not used by TeamSpeak, free storage for sdk users</p>
+</div></td><td></td></tr><tr><td id='variant.IsMuted'><code>IsMuted</code></td><td><div class='docblock'><p>Only make sense on the client side locally, &quot;1&quot; if this client is currently muted by us, &quot;0&quot; if he is not</p>
+</div></td><td></td></tr><tr><td id='variant.IsRecording'><code>IsRecording</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.VolumeModificator'><code>VolumeModificator</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.VersionSign'><code>VersionSign</code></td><td><div class='docblock'><p>Sign</p>
+</div></td><td></td></tr><tr><td id='variant.SecurityHash'><code>SecurityHash</code></td><td><div class='docblock'><p>SDK use, not used by teamspeak. Hash is provided by an outside source. A channel will use the security salt + other client data to calculate a hash, which must be the same as the one provided here.</p>
+</div></td><td></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td><div class='docblock'><p>Rare properties</p>
+</div></td><td></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td><td></td></tr><tr><td id='variant.Dummy8'><code>Dummy8</code></td><td></td><td></td></tr><tr><td id='variant.Dummy9'><code>Dummy9</code></td><td></td><td></td></tr><tr><td id='variant.KeyOffset'><code>KeyOffset</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.LastVarRequest'><code>LastVarRequest</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.LoginName'><code>LoginName</code></td><td><div class='docblock'><p>Used for serverquery clients, makes no sense on normal clients currently</p>
+</div></td><td></td></tr><tr><td id='variant.LoginPassword'><code>LoginPassword</code></td><td><div class='docblock'><p>Used for serverquery clients, makes no sense on normal clients currently</p>
+</div></td><td></td></tr><tr><td id='variant.DatabaseId'><code>DatabaseId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds database client id</p>
+</div></td><td></td></tr><tr><td id='variant.ChannelGroupId'><code>ChannelGroupId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds database client id</p>
+</div></td><td></td></tr><tr><td id='variant.Servergroups'><code>Servergroups</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds all servergroups client belongs too</p>
+</div></td><td></td></tr><tr><td id='variant.Created'><code>Created</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables), first time this client connected to this server</p>
+</div></td><td></td></tr><tr><td id='variant.Lastconnected'><code>Lastconnected</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables), last time this client connected to this server</p>
+</div></td><td></td></tr><tr><td id='variant.Totalconnections'><code>Totalconnections</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables), how many times this client connected to this server</p>
+</div></td><td></td></tr><tr><td id='variant.Away'><code>Away</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients away status</p>
+</div></td><td></td></tr><tr><td id='variant.AwayMessage'><code>AwayMessage</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this clients away status</p>
+</div></td><td></td></tr><tr><td id='variant.Type'><code>Type</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, determines if this is a real client or a server-query connection</p>
+</div></td><td></td></tr><tr><td id='variant.FlagAvatar'><code>FlagAvatar</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, this client got an avatar</p>
+</div></td><td></td></tr><tr><td id='variant.TalkPower'><code>TalkPower</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds database client id</p>
+</div></td><td></td></tr><tr><td id='variant.TalkRequest'><code>TalkRequest</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds timestamp where client requested to talk</p>
+</div></td><td></td></tr><tr><td id='variant.TalkRequestMsg'><code>TalkRequestMsg</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, holds matter for the request</p>
+</div></td><td></td></tr><tr><td id='variant.Description'><code>Description</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.IsTalker'><code>IsTalker</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.MonthBytesUploaded'><code>MonthBytesUploaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MonthBytesDownloaded'><code>MonthBytesDownloaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalBytesUploaded'><code>TotalBytesUploaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalBytesDownloaded'><code>TotalBytesDownloaded</code></td><td><div class='docblock'><p>This needs to be requested (=&gt; requestClientVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.IsPrioritySpeaker'><code>IsPrioritySpeaker</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.UnreadMessages'><code>UnreadMessages</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.NicknamePhonetic'><code>NicknamePhonetic</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.NeededServerqueryViewPower'><code>NeededServerqueryViewPower</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultToken'><code>DefaultToken</code></td><td><div class='docblock'><p>Only usable for ourself, the default token we used to connect on our last connection attempt</p>
+</div></td><td></td></tr><tr><td id='variant.IconId'><code>IconId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.IsChannelCommander'><code>IsChannelCommander</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.Country'><code>Country</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;</p>
+</div></td><td></td></tr><tr><td id='variant.ChannelGroupInheritedChannelId'><code>ChannelGroupInheritedChannelId</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, contains channel_id where the channel_group_id is set from</p>
+</div></td><td></td></tr><tr><td id='variant.Badges'><code>Badges</code></td><td><div class='docblock'><p>Automatically up-to-date for any client &quot;in view&quot;, stores icons for partner badges</p>
+</div></td><td></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-732' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#247' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-733' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#247' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-736' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#247' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-739' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#247' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ClientProperties.html' title='ts3plugin_sys::public_definitions::ClientProperties'>ClientProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-745' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#247' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -208,7 +220,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -224,6 +236,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

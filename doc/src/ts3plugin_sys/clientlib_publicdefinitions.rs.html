@@ -9,7 +9,9 @@
 
     <title>clientlib_publicdefinitions.rs.html -- source</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -72,16 +74,16 @@
 <span class='doccomment'>//! This file contains the definitions of clientlib_publicdefinitions.h</span>
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Visibility</span>
-{
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Visibility</span> {
     <span class='ident'>Enter</span> <span class='op'>=</span> <span class='number'>0</span>,
     <span class='ident'>Retain</span>,
     <span class='ident'>Leave</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ConnectStatus</span>
-{
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ConnectStatus</span> {
     <span class='doccomment'>/// There is no activity to the server, this is the default value</span>
     <span class='ident'>Disconnected</span> <span class='op'>=</span> <span class='number'>0</span>,
     <span class='doccomment'>/// We are trying to connect, we haven&#39;t got a clientID yet, we haven&#39;t been accepted by the server</span>
@@ -137,7 +139,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -153,6 +155,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

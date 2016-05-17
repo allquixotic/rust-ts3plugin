@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::public_definitions::ChannelProperties - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,10 +44,10 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>public_definitions</a>::<wbr><a class='enum' href=''>ChannelProperties</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-176' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#168-233' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-581' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#179-244' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum ChannelProperties {
     Name,
     Topic,
@@ -53,8 +55,8 @@
     Password,
     Codec,
     CodecQuality,
-    Maxclients,
-    Maxfamilyclients,
+    MaxClients,
+    MaxFamilyClients,
     Order,
     FlagPermanent,
     FlagSemiPermanent,
@@ -70,9 +72,9 @@
     Dummy5,
     Dummy6,
     Dummy7,
-    FlagMaxclientsUnlimited,
-    FlagMaxfamilyclientsUnlimited,
-    FlagMaxfamilyclientsInherited,
+    FlagMaxClientsUnlimited,
+    FlagMaxFamilyClientsUnlimited,
+    FlagMaxFamilyClientsInherited,
     FlagAreSubscribed,
     Filepath,
     NeededTalkPower,
@@ -82,35 +84,45 @@
     FlagPrivate,
     Endmarker,
 }</pre><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.Name'><code>Name</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Topic'><code>Topic</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Description'><code>Description</code></td><td><div class='docblock'><p>Must be requested (=&gt; requestChannelDescription)</p>
-</div></td></tr><tr><td id='variant.Password'><code>Password</code></td><td><div class='docblock'><p>Not available client side</p>
-</div></td></tr><tr><td id='variant.Codec'><code>Codec</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.CodecQuality'><code>CodecQuality</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Maxclients'><code>Maxclients</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Maxfamilyclients'><code>Maxfamilyclients</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Order'><code>Order</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagPermanent'><code>FlagPermanent</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagSemiPermanent'><code>FlagSemiPermanent</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagDefault'><code>FlagDefault</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagPassword'><code>FlagPassword</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.CodecLatencyFactor'><code>CodecLatencyFactor</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.CodecIsUnencrypted'><code>CodecIsUnencrypted</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.SecuritySalt'><code>SecuritySalt</code></td><td><div class='docblock'><p>Not available client side, not used in teamspeak, only SDK. Sets the options+salt for security hash.</p>
-</div></td></tr><tr><td id='variant.DeleteDelay'><code>DeleteDelay</code></td><td><div class='docblock'><p>How many seconds to wait before deleting this channel</p>
-</div></td></tr><tr><td id='variant.Dummy2'><code>Dummy2</code></td><td><div class='docblock'><p>Rare properties</p>
-</div></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td></tr><tr><td id='variant.FlagMaxclientsUnlimited'><code>FlagMaxclientsUnlimited</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagMaxfamilyclientsUnlimited'><code>FlagMaxfamilyclientsUnlimited</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagMaxfamilyclientsInherited'><code>FlagMaxfamilyclientsInherited</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagAreSubscribed'><code>FlagAreSubscribed</code></td><td><div class='docblock'><p>Only available client side, stores whether we are subscribed to this channel</p>
-</div></td></tr><tr><td id='variant.Filepath'><code>Filepath</code></td><td><div class='docblock'><p>Not available client side, the folder used for file-transfers for this channel</p>
-</div></td></tr><tr><td id='variant.NeededTalkPower'><code>NeededTalkPower</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.ForcedSilence'><code>ForcedSilence</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.NamePhonetic'><code>NamePhonetic</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.IconId'><code>IconId</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.FlagPrivate'><code>FlagPrivate</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td></tr></table></section>
+<table class='variants_table'><tr><td id='variant.Name'><code>Name</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.Topic'><code>Topic</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.Description'><code>Description</code></td><td><div class='docblock'><p>Must be requested (=&gt; requestChannelDescription)</p>
+</div></td><td></td></tr><tr><td id='variant.Password'><code>Password</code></td><td><div class='docblock'><p>Not available client side</p>
+</div></td><td></td></tr><tr><td id='variant.Codec'><code>Codec</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.CodecQuality'><code>CodecQuality</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.MaxClients'><code>MaxClients</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.MaxFamilyClients'><code>MaxFamilyClients</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.Order'><code>Order</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagPermanent'><code>FlagPermanent</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagSemiPermanent'><code>FlagSemiPermanent</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagDefault'><code>FlagDefault</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagPassword'><code>FlagPassword</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.CodecLatencyFactor'><code>CodecLatencyFactor</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.CodecIsUnencrypted'><code>CodecIsUnencrypted</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.SecuritySalt'><code>SecuritySalt</code></td><td><div class='docblock'><p>Not available client side, not used in teamspeak, only SDK. Sets the options+salt for security hash.</p>
+</div></td><td></td></tr><tr><td id='variant.DeleteDelay'><code>DeleteDelay</code></td><td><div class='docblock'><p>How many seconds to wait before deleting this channel</p>
+</div></td><td></td></tr><tr><td id='variant.Dummy2'><code>Dummy2</code></td><td><div class='docblock'><p>Rare properties</p>
+</div></td><td></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td></td><td></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td><td></td></tr><tr><td id='variant.FlagMaxClientsUnlimited'><code>FlagMaxClientsUnlimited</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagMaxFamilyClientsUnlimited'><code>FlagMaxFamilyClientsUnlimited</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagMaxFamilyClientsInherited'><code>FlagMaxFamilyClientsInherited</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagAreSubscribed'><code>FlagAreSubscribed</code></td><td><div class='docblock'><p>Only available client side, stores whether we are subscribed to this channel</p>
+</div></td><td></td></tr><tr><td id='variant.Filepath'><code>Filepath</code></td><td><div class='docblock'><p>Not available client side, the folder used for file-transfers for this channel</p>
+</div></td><td></td></tr><tr><td id='variant.NeededTalkPower'><code>NeededTalkPower</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.ForcedSilence'><code>ForcedSilence</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.NamePhonetic'><code>NamePhonetic</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.IconId'><code>IconId</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.FlagPrivate'><code>FlagPrivate</code></td><td><div class='docblock'><p>Available for all channels that are &quot;in view&quot;, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-617' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-618' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-621' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-624' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.ChannelProperties.html' title='ts3plugin_sys::public_definitions::ChannelProperties'>ChannelProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-630' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -153,7 +165,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -169,6 +181,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

@@ -9,7 +9,9 @@
 
     <title>ts3plugin::TsApi - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -42,13 +44,37 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>ts3plugin</a>::<wbr><a class='struct' href=''>TsApi</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-747' class='srclink' href='../src/ts3plugin/lib.rs.html#527' title='goto source code'>[src]</a></span></h1>
-<pre class='rust struct'>pub struct TsApi;</pre><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../ts3plugin/struct.TsApi.html' title='ts3plugin::TsApi'>TsApi</a></code></h3><div class='impl-items'><h4 id='method.get_raw_functions' class='method'><code>unsafe fn <a href='#method.get_raw_functions' class='fnname'>get_raw_functions</a>&lt;'a&gt;() -&gt; &amp;'a <a class='struct' href='../ts3plugin/struct.Ts3Functions.html' title='ts3plugin::Ts3Functions'>Ts3Functions</a></code></h4>
-<h4 id='method.log_message' class='method'><code>fn <a href='#method.log_message' class='fnname'>log_message</a>(message: &amp;<a href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, channel: &amp;<a href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, severity: <a class='enum' href='../ts3plugin_sys/public_definitions/enum.LogLevel.html' title='ts3plugin_sys::public_definitions::LogLevel'>LogLevel</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../ts3plugin/enum.Error.html' title='ts3plugin::Error'>Error</a>&gt;</code></h4>
-<h4 id='method.log_or_print' class='method'><code>fn <a href='#method.log_or_print' class='fnname'>log_or_print</a>(message: &amp;<a href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, channel: &amp;<a href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, severity: <a class='enum' href='../ts3plugin_sys/public_definitions/enum.LogLevel.html' title='ts3plugin_sys::public_definitions::LogLevel'>LogLevel</a>)</code></h4>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1798' class='srclink' href='../src/ts3plugin/src/lib.rs.html#87-89' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct TsApi {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../ts3plugin/struct.TsApi.html' title='ts3plugin::TsApi'>TsApi</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2353' class='srclink' href='../src/ts3plugin/src/lib.rs.html#467-572' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class='struct' href='../ts3plugin/struct.TsApi.html' title='ts3plugin::TsApi'>TsApi</a></code></h4>
+<div class='docblock'><p>Create a new TsApi instance without loading anything.
+This will be called from the <code>create_plugin!</code> macro.
+This function is not meant for public use.</p>
+</div><h4 id='method.load' class='method'><code>fn <a href='#method.load' class='fnname'>load</a>(&amp;mut self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../ts3plugin/enum.Error.html' title='ts3plugin::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Load all currently connected server and there data.
+This should normally be executed after <code>new()</code>
+This will be called from the <code>create_plugin!</code> macro.
+This function is not meant for public use.</p>
+</div><h4 id='method.static_log_message' class='method'><code>fn <a href='#method.static_log_message' class='fnname'>static_log_message</a>&lt;S1: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;, S2: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;&gt;(message: S1, channel: S2, severity: <a class='enum' href='../ts3plugin_sys/public_definitions/enum.LogLevel.html' title='ts3plugin_sys::public_definitions::LogLevel'>LogLevel</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../ts3plugin/enum.Error.html' title='ts3plugin::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Please try to use the member method <code>log_message</code> instead of this static method.</p>
+</div><h4 id='method.static_log_or_print' class='method'><code>fn <a href='#method.static_log_or_print' class='fnname'>static_log_or_print</a>&lt;S1: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;, S2: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;&gt;(message: S1, channel: S2, severity: <a class='enum' href='../ts3plugin_sys/public_definitions/enum.LogLevel.html' title='ts3plugin_sys::public_definitions::LogLevel'>LogLevel</a>)</code></h4>
+<div class='docblock'><p>Please try to use the member method <code>log_or_print</code> instead of this static method.</p>
+</div><h4 id='method.static_get_error_message' class='method'><code>fn <a href='#method.static_get_error_message' class='fnname'>static_get_error_message</a>(error: <a class='enum' href='../ts3plugin/enum.Error.html' title='ts3plugin::Error'>Error</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='../ts3plugin/enum.Error.html' title='ts3plugin::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Please try to use the member method <code>get_error_message</code> instead of this static method.</p>
+</div><h4 id='method.log_message' class='method'><code>fn <a href='#method.log_message' class='fnname'>log_message</a>&lt;S1: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;, S2: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;&gt;(&amp;self, message: S1, channel: S2, severity: <a class='enum' href='../ts3plugin_sys/public_definitions/enum.LogLevel.html' title='ts3plugin_sys::public_definitions::LogLevel'>LogLevel</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../ts3plugin/enum.Error.html' title='ts3plugin::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Log a message using the TeamSpeak logging API.</p>
+</div><h4 id='method.log_or_print' class='method'><code>fn <a href='#method.log_or_print' class='fnname'>log_or_print</a>&lt;S1: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;, S2: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;&gt;(&amp;self, message: S1, channel: S2, severity: <a class='enum' href='../ts3plugin_sys/public_definitions/enum.LogLevel.html' title='ts3plugin_sys::public_definitions::LogLevel'>LogLevel</a>)</code></h4>
+<div class='docblock'><p>Log a message using the TeamSpeak logging API.
+If that fails, print the message.</p>
+</div><h4 id='method.get_server' class='method'><code>fn <a href='#method.get_server' class='fnname'>get_server</a>(&amp;self, server_id: <a class='struct' href='../ts3plugin/struct.ServerId.html' title='ts3plugin::ServerId'>ServerId</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../ts3plugin/struct.Server.html' title='ts3plugin::Server'>Server</a>&gt;</code></h4>
+<h4 id='method.get_mut_server' class='method'><code>fn <a href='#method.get_mut_server' class='fnname'>get_mut_server</a>(&amp;mut self, server_id: <a class='struct' href='../ts3plugin/struct.ServerId.html' title='ts3plugin::ServerId'>ServerId</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;mut <a class='struct' href='../ts3plugin/struct.Server.html' title='ts3plugin::Server'>Server</a>&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../ts3plugin/struct.TsApi.html' title='ts3plugin::TsApi'>TsApi</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2351' class='srclink' href='../src/ts3plugin/src/lib.rs.html#459-465' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../ts3plugin/struct.TsApi.html' title='ts3plugin::TsApi'>TsApi</a></code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>
 
@@ -92,7 +118,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -108,6 +134,6 @@
     <script src="../jquery.js"></script>
     <script src="../main.js"></script>
     
-    <script async src="../search-index.js"></script>
+    <script defer src="../search-index.js"></script>
 </body>
 </html>

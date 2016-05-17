@@ -9,7 +9,9 @@
 
     <title>public_definitions.rs.html -- source</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -955,6 +957,39 @@
 <span id="913">913</span>
 <span id="914">914</span>
 <span id="915">915</span>
+<span id="916">916</span>
+<span id="917">917</span>
+<span id="918">918</span>
+<span id="919">919</span>
+<span id="920">920</span>
+<span id="921">921</span>
+<span id="922">922</span>
+<span id="923">923</span>
+<span id="924">924</span>
+<span id="925">925</span>
+<span id="926">926</span>
+<span id="927">927</span>
+<span id="928">928</span>
+<span id="929">929</span>
+<span id="930">930</span>
+<span id="931">931</span>
+<span id="932">932</span>
+<span id="933">933</span>
+<span id="934">934</span>
+<span id="935">935</span>
+<span id="936">936</span>
+<span id="937">937</span>
+<span id="938">938</span>
+<span id="939">939</span>
+<span id="940">940</span>
+<span id="941">941</span>
+<span id="942">942</span>
+<span id="943">943</span>
+<span id="944">944</span>
+<span id="945">945</span>
+<span id="946">946</span>
+<span id="947">947</span>
+<span id="948">948</span>
 </pre><pre class='rust '>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>dead_code</span>)]</span>
 
@@ -1017,6 +1052,7 @@
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_MONO</span>:                  <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x40000</span>;
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>TalkStatus</span>
 {
     <span class='ident'>NotTalking</span>           <span class='op'>=</span> <span class='number'>0</span>,
@@ -1025,6 +1061,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>CodecType</span>
 {
     <span class='doccomment'>/// Mono,   16bit,  8kHz, bitrate dependent on the quality setting</span>
@@ -1042,6 +1079,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>CodecEncryptionMode</span>
 {
     <span class='ident'>PerChannel</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1050,15 +1088,17 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>TextMessageTargetMode</span>
 {
-    <span class='ident'>Client</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='ident'>Client</span> <span class='op'>=</span> <span class='number'>1</span>,
     <span class='ident'>Channel</span>,
     <span class='ident'>Server</span>,
     <span class='ident'>Max</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MuteInputStatus</span>
 {
     <span class='prelude-val'>None</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1066,6 +1106,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MuteOutputStatus</span>
 {
     <span class='prelude-val'>None</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1073,6 +1114,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>HardwareInputStatus</span>
 {
     <span class='ident'>Disabled</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1080,6 +1122,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>HardwareOutputStatus</span>
 {
     <span class='ident'>Disabled</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1087,6 +1130,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>InputDeactivationStatus</span>
 {
     <span class='ident'>Active</span>      <span class='op'>=</span> <span class='number'>0</span>,
@@ -1094,6 +1138,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ReasonIdentifier</span>
 {
     <span class='doccomment'>/// No reason data</span>
@@ -1123,6 +1168,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ChannelProperties</span>
 {
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
@@ -1138,9 +1184,9 @@
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
     <span class='ident'>CodecQuality</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
-    <span class='ident'>Maxclients</span>,
+    <span class='ident'>MaxClients</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
-    <span class='ident'>Maxfamilyclients</span>,
+    <span class='ident'>MaxFamilyClients</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
     <span class='ident'>Order</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
@@ -1168,11 +1214,11 @@
     <span class='ident'>Dummy6</span>,
     <span class='ident'>Dummy7</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
-    <span class='ident'>FlagMaxclientsUnlimited</span>,
+    <span class='ident'>FlagMaxClientsUnlimited</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
-    <span class='ident'>FlagMaxfamilyclientsUnlimited</span>,
+    <span class='ident'>FlagMaxFamilyClientsUnlimited</span>,
     <span class='doccomment'>/// Available for all channels that are &quot;in view&quot;, always up-to-date</span>
-    <span class='ident'>FlagMaxfamilyclientsInherited</span>,
+    <span class='ident'>FlagMaxFamilyClientsInherited</span>,
     <span class='doccomment'>/// Only available client side, stores whether we are subscribed to this channel</span>
     <span class='ident'>FlagAreSubscribed</span>,
     <span class='doccomment'>/// Not available client side, the folder used for file-transfers for this channel</span>
@@ -1191,6 +1237,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ClientProperties</span>
 {
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, can be used to identify this particular client installation</span>
@@ -1208,7 +1255,7 @@
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, this clients headphones/speakers/mic combined mute status</span>
     <span class='ident'>OutputMuted</span>,
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, this clients headphones/speakers only mute status</span>
-    <span class='ident'>OutputonlyMuted</span>,
+    <span class='ident'>OutputOnlyMuted</span>,
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, this clients microphone hardware status (is the capture device opened?)</span>
     <span class='ident'>InputHardware</span>,
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, this clients headphone/speakers hardware status (is the playback device opened?)</span>
@@ -1314,6 +1361,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>VirtualServerProperties</span>
 {
     <span class='doccomment'>/// Available when connected, can be used to identify this particular server installation</span>
@@ -1327,7 +1375,7 @@
     <span class='doccomment'>/// Available when connected</span>
     <span class='ident'>Version</span>,
     <span class='doccomment'>/// Only available on request (=&gt; requestServerVariables), stores the maximum number of clients that may currently join the server</span>
-    <span class='ident'>Maxclients</span>,
+    <span class='ident'>MaxClients</span>,
     <span class='doccomment'>/// Not available to clients, the server password</span>
     <span class='ident'>Password</span>,
     <span class='doccomment'>/// Only available on request (=&gt; requestServerVariables)</span>
@@ -1473,12 +1521,13 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ConnectionProperties</span>
 {
     <span class='doccomment'>/// Average latency for a round trip through and back this connection</span>
     <span class='ident'>Ping</span> <span class='op'>=</span> <span class='number'>0</span>,
     <span class='doccomment'>/// Standard deviation of the above average latency</span>
-    <span class='ident'>PingDeciation</span>,
+    <span class='ident'>PingDeviation</span>,
     <span class='doccomment'>/// How long the connection exists already</span>
     <span class='ident'>ConnectedTime</span>,
     <span class='doccomment'>/// How long since the last action of this client</span>
@@ -1565,6 +1614,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>LogTypes</span>
 {
     <span class='prelude-val'>None</span>         <span class='op'>=</span>  <span class='number'>0</span>,
@@ -1605,6 +1655,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>GroupWhisperType</span>
 {
     <span class='ident'>Servergroup</span>      <span class='op'>=</span> <span class='number'>0</span>,
@@ -1615,6 +1666,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>GroupWhisperTargetMode</span>
 {
     <span class='ident'>All</span>                   <span class='op'>=</span> <span class='number'>0</span>,
@@ -1628,6 +1680,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MonoSoundDestination</span>
 {
     <span class='doccomment'>/// Send mono sound to all available speakers</span>
@@ -1639,6 +1692,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>SecuritySaltOptions</span>
 {
     <span class='doccomment'>/// Put nickname into security hash</span>
@@ -1649,6 +1703,7 @@
 
 <span class='doccomment'>/// This enum is used to disable client commands on the server</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ClientCommand</span>
 {
     <span class='ident'>RequestConnectionInfo</span>       <span class='op'>=</span> <span class='number'>0</span>,
@@ -1668,6 +1723,7 @@
 
 <span class='doccomment'>/// Access Control List</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ACLType</span>
 {
     <span class='prelude-val'>None</span>      <span class='op'>=</span> <span class='number'>0</span>,
@@ -1705,6 +1761,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>GroupShowNameTreeMode</span>
 {
     <span class='doccomment'>/// Dont group show name</span>
@@ -1716,6 +1773,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>PluginTargetMode</span>
 {
     <span class='doccomment'>/// Send plugincmd to all clients in current channel</span>
@@ -1730,6 +1788,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ServerBinding</span>
 {
     <span class='ident'>Virtualserver</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1738,7 +1797,8 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>HostMessageMode</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>HostmessageMode</span>
 {
     <span class='doccomment'>/// Dont display anything</span>
     <span class='prelude-val'>None</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1751,7 +1811,8 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>HostBannerMode</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>HostbannerMode</span>
 {
     <span class='doccomment'>/// Do not adjust</span>
     <span class='ident'>NoAdjust</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1762,6 +1823,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>FileTransferState</span>
 {
     <span class='ident'>Initialising</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1770,6 +1832,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>FileListType</span>
 {
     <span class='ident'>Directory</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1777,6 +1840,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ClientType</span>
 {
     <span class='ident'>Normal</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1784,6 +1848,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>AwayStatus</span>
 {
     <span class='prelude-val'>None</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1791,6 +1856,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>CommandLinePropertiesRare</span>
 {
     <span class='ident'>Nothing</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1798,6 +1864,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ServerInstancePropertiesRare</span>
 {
     <span class='ident'>DatabaseVersion</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1823,6 +1890,7 @@
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>LicenseViolationType</span>
 {
     <span class='ident'>No</span> <span class='op'>=</span> <span class='number'>0</span>,
@@ -1830,8 +1898,8 @@
     <span class='ident'>SlotSuspicion</span>
 }
 
-<span class='macro'>bitflags</span><span class='macro'>!</span>{<span class='ident'>flags</span> <span class='ident'>BBCodeTags</span>: <span class='ident'>u32</span>
-{
+<span class='macro'>bitflags</span><span class='macro'>!</span> {
+<span class='ident'>flags</span> <span class='ident'>BBCodeTags</span>: <span class='ident'>u32</span> {
     <span class='kw'>const</span> <span class='ident'>B</span>           <span class='op'>=</span> <span class='number'>0x00000001</span>,
     <span class='kw'>const</span> <span class='ident'>I</span>           <span class='op'>=</span> <span class='number'>0x00000002</span>,
     <span class='kw'>const</span> <span class='ident'>U</span>           <span class='op'>=</span> <span class='number'>0x00000004</span>,
@@ -1915,7 +1983,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -1931,6 +1999,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

@@ -9,7 +9,9 @@
 
     <title>ts3plugin_sys::public_definitions::VirtualServerProperties - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -42,17 +44,17 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>ts3plugin_sys</a>::<wbr><a href='index.html'>public_definitions</a>::<wbr><a class='enum' href=''>VirtualServerProperties</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-274' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#359-515' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-811' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#372-528' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum VirtualServerProperties {
     UniqueIdentifier,
     Name,
     Welcomemessage,
     Platform,
     Version,
-    Maxclients,
+    MaxClients,
     Password,
     ClientsOnline,
     ChannelsOnline,
@@ -129,79 +131,89 @@
     ChannelTempDeleteDelayDefault,
     Endmarker,
 }</pre><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.UniqueIdentifier'><code>UniqueIdentifier</code></td><td><div class='docblock'><p>Available when connected, can be used to identify this particular server installation</p>
-</div></td></tr><tr><td id='variant.Name'><code>Name</code></td><td><div class='docblock'><p>Available and always up-to-date when connected</p>
-</div></td></tr><tr><td id='variant.Welcomemessage'><code>Welcomemessage</code></td><td><div class='docblock'><p>Available when connected, (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.Platform'><code>Platform</code></td><td><div class='docblock'><p>Available when connected</p>
-</div></td></tr><tr><td id='variant.Version'><code>Version</code></td><td><div class='docblock'><p>Available when connected</p>
-</div></td></tr><tr><td id='variant.Maxclients'><code>Maxclients</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables), stores the maximum number of clients that may currently join the server</p>
-</div></td></tr><tr><td id='variant.Password'><code>Password</code></td><td><div class='docblock'><p>Not available to clients, the server password</p>
-</div></td></tr><tr><td id='variant.ClientsOnline'><code>ClientsOnline</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.ChannelsOnline'><code>ChannelsOnline</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.Created'><code>Created</code></td><td><div class='docblock'><p>Available when connected, stores the time when the server was created</p>
-</div></td></tr><tr><td id='variant.Uptime'><code>Uptime</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables), the time since the server was started</p>
-</div></td></tr><tr><td id='variant.CodecEncryptionMode'><code>CodecEncryptionMode</code></td><td><div class='docblock'><p>Available and always up-to-date when connected</p>
-</div></td></tr><tr><td id='variant.Dummy0'><code>Dummy0</code></td><td><div class='docblock'><p>Rare properties</p>
-</div></td></tr><tr><td id='variant.Dummy1'><code>Dummy1</code></td><td></td></tr><tr><td id='variant.Dummy2'><code>Dummy2</code></td><td></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td></tr><tr><td id='variant.Dummy8'><code>Dummy8</code></td><td></td></tr><tr><td id='variant.Keypair'><code>Keypair</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.Hostmessage'><code>Hostmessage</code></td><td><div class='docblock'><p>Available when connected, not updated while connected</p>
-</div></td></tr><tr><td id='variant.HostmessageMode'><code>HostmessageMode</code></td><td><div class='docblock'><p>Available when connected, not updated while connected</p>
-</div></td></tr><tr><td id='variant.Filebase'><code>Filebase</code></td><td><div class='docblock'><p>Not available to clients, stores the folder used for file transfers</p>
-</div></td></tr><tr><td id='variant.DefaultServerGroup'><code>DefaultServerGroup</code></td><td><div class='docblock'><p>The client permissions server group that a new client gets assigned</p>
-</div></td></tr><tr><td id='variant.DefaultChannelGroup'><code>DefaultChannelGroup</code></td><td><div class='docblock'><p>The channel permissions group that a new client gets assigned when joining a channel</p>
-</div></td></tr><tr><td id='variant.FlagPassword'><code>FlagPassword</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.DefaultChannelAdminGroup'><code>DefaultChannelAdminGroup</code></td><td><div class='docblock'><p>The channel permissions group that a client gets assigned when creating a channel</p>
-</div></td></tr><tr><td id='variant.MaxDownloadTotalBandwidth'><code>MaxDownloadTotalBandwidth</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.MaxUploadTotalBandwidth'><code>MaxUploadTotalBandwidth</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.HostbannerUrl'><code>HostbannerUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.HostbannerGfxUrl'><code>HostbannerGfxUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.HostbannerGfxInterval'><code>HostbannerGfxInterval</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.ComplainAutobanCount'><code>ComplainAutobanCount</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.ComplainAutobanTime'><code>ComplainAutobanTime</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.ComplainRemoveTime'><code>ComplainRemoveTime</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.MinClientsInChannelBeforeForcedSilence'><code>MinClientsInChannelBeforeForcedSilence</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.PrioritySpeakerDimmModificator'><code>PrioritySpeakerDimmModificator</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Id'><code>Id</code></td><td><div class='docblock'><p>Available when connected</p>
-</div></td></tr><tr><td id='variant.AntifloodPointsTickReduce'><code>AntifloodPointsTickReduce</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.AntifloodPointsNeededCommandBlock'><code>AntifloodPointsNeededCommandBlock</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.AntifloodPointsNeededIpBlock'><code>AntifloodPointsNeededIpBlock</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.ClientConnections'><code>ClientConnections</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.QueryClientConnections'><code>QueryClientConnections</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.HostbuttonTooltip'><code>HostbuttonTooltip</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.HostbuttonUrl'><code>HostbuttonUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.HostbuttonGfxUrl'><code>HostbuttonGfxUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.QueryclientsOnline'><code>QueryclientsOnline</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.DownloadQuota'><code>DownloadQuota</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.UploadQuota'><code>UploadQuota</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.MonthBytesDownloaded'><code>MonthBytesDownloaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.MonthBytesUploaded'><code>MonthBytesUploaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.TotalBytesDownloaded'><code>TotalBytesDownloaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.TotalBytesUploaded'><code>TotalBytesUploaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.Port'><code>Port</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.Autostart'><code>Autostart</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.MachineId'><code>MachineId</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.NeededIdentitySecurityLevel'><code>NeededIdentitySecurityLevel</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.LogClient'><code>LogClient</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.LogQuery'><code>LogQuery</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.LogChannel'><code>LogChannel</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.LogPermissions'><code>LogPermissions</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.LogServer'><code>LogServer</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.LogFiletransfer'><code>LogFiletransfer</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.MinClientVersion'><code>MinClientVersion</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.NamePhonetic'><code>NamePhonetic</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.IconId'><code>IconId</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.ReservedSlots'><code>ReservedSlots</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.TotalPacketlossSpeech'><code>TotalPacketlossSpeech</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.TotalPacketlossKeepalive'><code>TotalPacketlossKeepalive</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.TotalPacketlossControl'><code>TotalPacketlossControl</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.TotalPacketlossTotal'><code>TotalPacketlossTotal</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.TotalPing'><code>TotalPing</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.Ip'><code>Ip</code></td><td><div class='docblock'><p>Internal use | contains only ONE binded ip</p>
-</div></td></tr><tr><td id='variant.WeblistEnabled'><code>WeblistEnabled</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
-</div></td></tr><tr><td id='variant.AutogeneratedPrivilegekey'><code>AutogeneratedPrivilegekey</code></td><td><div class='docblock'><p>Internal use</p>
-</div></td></tr><tr><td id='variant.AskForPrivilegekey'><code>AskForPrivilegekey</code></td><td><div class='docblock'><p>Available when connected</p>
-</div></td></tr><tr><td id='variant.HostbannerMode'><code>HostbannerMode</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.ChannelTempDeleteDelayDefault'><code>ChannelTempDeleteDelayDefault</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
-</div></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td></tr></table></section>
+<table class='variants_table'><tr><td id='variant.UniqueIdentifier'><code>UniqueIdentifier</code></td><td><div class='docblock'><p>Available when connected, can be used to identify this particular server installation</p>
+</div></td><td></td></tr><tr><td id='variant.Name'><code>Name</code></td><td><div class='docblock'><p>Available and always up-to-date when connected</p>
+</div></td><td></td></tr><tr><td id='variant.Welcomemessage'><code>Welcomemessage</code></td><td><div class='docblock'><p>Available when connected, (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.Platform'><code>Platform</code></td><td><div class='docblock'><p>Available when connected</p>
+</div></td><td></td></tr><tr><td id='variant.Version'><code>Version</code></td><td><div class='docblock'><p>Available when connected</p>
+</div></td><td></td></tr><tr><td id='variant.MaxClients'><code>MaxClients</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables), stores the maximum number of clients that may currently join the server</p>
+</div></td><td></td></tr><tr><td id='variant.Password'><code>Password</code></td><td><div class='docblock'><p>Not available to clients, the server password</p>
+</div></td><td></td></tr><tr><td id='variant.ClientsOnline'><code>ClientsOnline</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.ChannelsOnline'><code>ChannelsOnline</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.Created'><code>Created</code></td><td><div class='docblock'><p>Available when connected, stores the time when the server was created</p>
+</div></td><td></td></tr><tr><td id='variant.Uptime'><code>Uptime</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables), the time since the server was started</p>
+</div></td><td></td></tr><tr><td id='variant.CodecEncryptionMode'><code>CodecEncryptionMode</code></td><td><div class='docblock'><p>Available and always up-to-date when connected</p>
+</div></td><td></td></tr><tr><td id='variant.Dummy0'><code>Dummy0</code></td><td><div class='docblock'><p>Rare properties</p>
+</div></td><td></td></tr><tr><td id='variant.Dummy1'><code>Dummy1</code></td><td></td><td></td></tr><tr><td id='variant.Dummy2'><code>Dummy2</code></td><td></td><td></td></tr><tr><td id='variant.Dummy3'><code>Dummy3</code></td><td></td><td></td></tr><tr><td id='variant.Dummy4'><code>Dummy4</code></td><td></td><td></td></tr><tr><td id='variant.Dummy5'><code>Dummy5</code></td><td></td><td></td></tr><tr><td id='variant.Dummy6'><code>Dummy6</code></td><td></td><td></td></tr><tr><td id='variant.Dummy7'><code>Dummy7</code></td><td></td><td></td></tr><tr><td id='variant.Dummy8'><code>Dummy8</code></td><td></td><td></td></tr><tr><td id='variant.Keypair'><code>Keypair</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.Hostmessage'><code>Hostmessage</code></td><td><div class='docblock'><p>Available when connected, not updated while connected</p>
+</div></td><td></td></tr><tr><td id='variant.HostmessageMode'><code>HostmessageMode</code></td><td><div class='docblock'><p>Available when connected, not updated while connected</p>
+</div></td><td></td></tr><tr><td id='variant.Filebase'><code>Filebase</code></td><td><div class='docblock'><p>Not available to clients, stores the folder used for file transfers</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultServerGroup'><code>DefaultServerGroup</code></td><td><div class='docblock'><p>The client permissions server group that a new client gets assigned</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultChannelGroup'><code>DefaultChannelGroup</code></td><td><div class='docblock'><p>The channel permissions group that a new client gets assigned when joining a channel</p>
+</div></td><td></td></tr><tr><td id='variant.FlagPassword'><code>FlagPassword</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.DefaultChannelAdminGroup'><code>DefaultChannelAdminGroup</code></td><td><div class='docblock'><p>The channel permissions group that a client gets assigned when creating a channel</p>
+</div></td><td></td></tr><tr><td id='variant.MaxDownloadTotalBandwidth'><code>MaxDownloadTotalBandwidth</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MaxUploadTotalBandwidth'><code>MaxUploadTotalBandwidth</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.HostbannerUrl'><code>HostbannerUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.HostbannerGfxUrl'><code>HostbannerGfxUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.HostbannerGfxInterval'><code>HostbannerGfxInterval</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.ComplainAutobanCount'><code>ComplainAutobanCount</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.ComplainAutobanTime'><code>ComplainAutobanTime</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.ComplainRemoveTime'><code>ComplainRemoveTime</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MinClientsInChannelBeforeForcedSilence'><code>MinClientsInChannelBeforeForcedSilence</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.PrioritySpeakerDimmModificator'><code>PrioritySpeakerDimmModificator</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.Id'><code>Id</code></td><td><div class='docblock'><p>Available when connected</p>
+</div></td><td></td></tr><tr><td id='variant.AntifloodPointsTickReduce'><code>AntifloodPointsTickReduce</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.AntifloodPointsNeededCommandBlock'><code>AntifloodPointsNeededCommandBlock</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.AntifloodPointsNeededIpBlock'><code>AntifloodPointsNeededIpBlock</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.ClientConnections'><code>ClientConnections</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.QueryClientConnections'><code>QueryClientConnections</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.HostbuttonTooltip'><code>HostbuttonTooltip</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.HostbuttonUrl'><code>HostbuttonUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.HostbuttonGfxUrl'><code>HostbuttonGfxUrl</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.QueryclientsOnline'><code>QueryclientsOnline</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.DownloadQuota'><code>DownloadQuota</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.UploadQuota'><code>UploadQuota</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MonthBytesDownloaded'><code>MonthBytesDownloaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MonthBytesUploaded'><code>MonthBytesUploaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalBytesDownloaded'><code>TotalBytesDownloaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalBytesUploaded'><code>TotalBytesUploaded</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.Port'><code>Port</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.Autostart'><code>Autostart</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MachineId'><code>MachineId</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.NeededIdentitySecurityLevel'><code>NeededIdentitySecurityLevel</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.LogClient'><code>LogClient</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.LogQuery'><code>LogQuery</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.LogChannel'><code>LogChannel</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.LogPermissions'><code>LogPermissions</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.LogServer'><code>LogServer</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.LogFiletransfer'><code>LogFiletransfer</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.MinClientVersion'><code>MinClientVersion</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.NamePhonetic'><code>NamePhonetic</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.IconId'><code>IconId</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.ReservedSlots'><code>ReservedSlots</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.TotalPacketlossSpeech'><code>TotalPacketlossSpeech</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalPacketlossKeepalive'><code>TotalPacketlossKeepalive</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalPacketlossControl'><code>TotalPacketlossControl</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalPacketlossTotal'><code>TotalPacketlossTotal</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.TotalPing'><code>TotalPing</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.Ip'><code>Ip</code></td><td><div class='docblock'><p>Internal use | contains only ONE binded ip</p>
+</div></td><td></td></tr><tr><td id='variant.WeblistEnabled'><code>WeblistEnabled</code></td><td><div class='docblock'><p>Only available on request (=&gt; requestServerVariables)</p>
+</div></td><td></td></tr><tr><td id='variant.AutogeneratedPrivilegekey'><code>AutogeneratedPrivilegekey</code></td><td><div class='docblock'><p>Internal use</p>
+</div></td><td></td></tr><tr><td id='variant.AskForPrivilegekey'><code>AskForPrivilegekey</code></td><td><div class='docblock'><p>Available when connected</p>
+</div></td><td></td></tr><tr><td id='variant.HostbannerMode'><code>HostbannerMode</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.ChannelTempDeleteDelayDefault'><code>ChannelTempDeleteDelayDefault</code></td><td><div class='docblock'><p>Available when connected, always up-to-date</p>
+</div></td><td></td></tr><tr><td id='variant.Endmarker'><code>Endmarker</code></td><td></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-894' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#371' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-895' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#371' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-898' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#371' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-901' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#371' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class="since">1.0.0</div></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../ts3plugin_sys/public_definitions/enum.VirtualServerProperties.html' title='ts3plugin_sys::public_definitions::VirtualServerProperties'>VirtualServerProperties</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-907' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#371' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -244,7 +256,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -260,6 +272,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>
