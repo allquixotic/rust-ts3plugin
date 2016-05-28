@@ -846,7 +846,6 @@
 <span id="802">802</span>
 <span id="803">803</span>
 <span id="804">804</span>
-<span id="805">805</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_char</span>, <span class='ident'>c_int</span>, <span class='ident'>c_uint</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>ffi</span>::<span class='ident'>CStr</span>;
@@ -1262,8 +1261,7 @@
                         <span class='kw'>let</span> <span class='ident'>message_receiver</span> <span class='op'>=</span> <span class='kw'>match</span> <span class='ident'>target_mode</span> {
                             ::<span class='ident'>TextMessageTargetMode</span>::<span class='ident'>Client</span> <span class='op'>=&gt;</span>
                                 ::<span class='ident'>MessageReceiver</span>::<span class='ident'>Connection</span>(::<span class='ident'>ConnectionId</span>(<span class='ident'>receiver_id</span>)),
-                            ::<span class='ident'>TextMessageTargetMode</span>::<span class='ident'>Channel</span> <span class='op'>=&gt;</span>
-                                ::<span class='ident'>MessageReceiver</span>::<span class='ident'>Channel</span>(::<span class='ident'>ChannelId</span>(<span class='ident'>receiver_id</span> <span class='kw'>as</span> <span class='ident'>u64</span>)),
+                            ::<span class='ident'>TextMessageTargetMode</span>::<span class='ident'>Channel</span> <span class='op'>=&gt;</span> ::<span class='ident'>MessageReceiver</span>::<span class='ident'>Channel</span>,
                             ::<span class='ident'>TextMessageTargetMode</span>::<span class='ident'>Server</span> <span class='op'>=&gt;</span> ::<span class='ident'>MessageReceiver</span>::<span class='ident'>Server</span>,
                             _ <span class='op'>=&gt;</span> {
                                 <span class='ident'>api</span>.<span class='ident'>log_or_print</span>(<span class='string'>&quot;Got invalid TextMessageTargetMode&quot;</span>,
@@ -1497,7 +1495,8 @@
             <span class='macro'>to_string</span><span class='macro'>!</span>(<span class='ident'>invoker_name</span>)))).<span class='ident'>unwrap</span>();
 }
 
-<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unknown_lints</span>, <span class='ident'>too_many_arguments</span>)]</span>
+<span class='comment'>// Ignore clippy warnings, we can&#39;t change the TeamSpeak interface</span>
+<span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
 <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
@@ -1529,8 +1528,7 @@
     <span class='kw'>if</span> <span class='ident'>b</span> { <span class='number'>1</span> } <span class='kw'>else</span> { <span class='number'>0</span> }
 }
 
-<span class='comment'>// Ignore clippy warnings, we can&#39;t change the TeamSpeak interface</span>
-<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unknown_lints</span>, <span class='ident'>too_many_arguments</span>)]</span>
+<span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
 <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
@@ -1546,7 +1544,7 @@
         )).<span class='ident'>unwrap</span>();
 }
 
-<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unknown_lints</span>, <span class='ident'>too_many_arguments</span>)]</span>
+<span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
 <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
@@ -1562,7 +1560,7 @@
         )).<span class='ident'>unwrap</span>();
 }
 
-<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unknown_lints</span>, <span class='ident'>too_many_arguments</span>)]</span>
+<span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
 <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
@@ -1609,7 +1607,7 @@
         <span class='macro'>to_string</span><span class='macro'>!</span>(<span class='ident'>invoker_uid</span>), <span class='macro'>to_string</span><span class='macro'>!</span>(<span class='ident'>invoker_name</span>)))).<span class='ident'>unwrap</span>();
 }
 
-<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unknown_lints</span>, <span class='ident'>too_many_arguments</span>)]</span>
+<span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
 <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
@@ -1624,7 +1622,7 @@
         <span class='macro'>to_string</span><span class='macro'>!</span>(<span class='ident'>invoker_uid</span>), <span class='macro'>to_string</span><span class='macro'>!</span>(<span class='ident'>invoker_name</span>)))).<span class='ident'>unwrap</span>();
 }
 
-<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unknown_lints</span>, <span class='ident'>too_many_arguments</span>)]</span>
+<span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
 <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
@@ -1677,6 +1675,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
