@@ -47,20 +47,20 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-555' class='srclink' href='../../src/ts3plugin/src/plugin.rs.html#5-16' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-737' class='srclink' href='../../src/ts3plugin/src/plugin.rs.html#5-16' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum InitError {
     Failure,
     FailureNoMessage,
 }</pre><h2 class='variants'>Variants</h2>
-<table class='variants_table'><tr><td id='variant.Failure'><code>Failure</code></td><td><div class='docblock'><p>Initialisation failed, the plugin will be unloaded again</p>
-</div></td><td></td></tr><tr><td id='variant.FailureNoMessage'><code>FailureNoMessage</code></td><td><div class='docblock'><p>Like <code>Failure</code>, but the client will not show a &quot;failed to load&quot; warning.
+<span id='variant.Failure' class='variant'><code>Failure</code></span><div class='docblock'><p>Initialisation failed, the plugin will be unloaded again</p>
+</div><span id='variant.FailureNoMessage' class='variant'><code>FailureNoMessage</code></span><div class='docblock'><p>Like <code>Failure</code>, but the client will not show a &quot;failed to load&quot; warning.
 This is a very special case and should only be used if a plugin displays
 a dialog (e.g. overlay) asking the user to disable the plugin again,
 avoiding the show another dialog by the client telling the user the
 plugin failed to load.
 For normal case, if a plugin really failed to load because of an error,
 the correct return value is <code>Failure</code>.</p>
-</div></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../ts3plugin/plugin/enum.InitError.html' title='ts3plugin::plugin::InitError'>InitError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-558' class='srclink' href='../../src/ts3plugin/src/plugin.rs.html#4' title='goto source code'>[src]</a></span></h3>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../ts3plugin/plugin/enum.InitError.html' title='ts3plugin::plugin::InitError'>InitError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-731' class='srclink' href='../../src/ts3plugin/src/plugin.rs.html#4' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>

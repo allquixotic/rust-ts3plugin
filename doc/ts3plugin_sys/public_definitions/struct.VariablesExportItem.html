@@ -47,23 +47,22 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-1414' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#743-753' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-1411' class='srclink' href='../../src/ts3plugin_sys/public_definitions.rs.html#743-753' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct VariablesExportItem {
     pub item_is_valid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
     pub proposed_is_set: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
     pub current: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a>c_char,
     pub proposed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a>c_char,
 }</pre><div class='docblock'><p>Some structs to handle variables in callbacks</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                             <td id='structfield.item_is_valid'><code>item_is_valid</code></td><td><div class='docblock'><p>This item has valid values. ignore this item if 0</p>
-</div></td></tr><tr class='stab '>
-                             <td id='structfield.proposed_is_set'><code>proposed_is_set</code></td><td><div class='docblock'><p>The value in proposed is set. if 0 ignore proposed</p>
-</div></td></tr><tr class='stab '>
-                             <td id='structfield.current'><code>current</code></td><td><div class='docblock'><p>Current value (stored in memory)</p>
-</div></td></tr><tr class='stab '>
-                             <td id='structfield.proposed'><code>proposed</code></td><td><div class='docblock'><p>New value to change to (const, so no updates please)</p>
-</div></td></tr></table></section>
+</div><h2 class='fields'>Fields</h2><span id='structfield.item_is_valid' class='structfield'><code>item_is_valid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>This item has valid values. ignore this item if 0</p>
+</div><span id='structfield.proposed_is_set' class='structfield'><code>proposed_is_set: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>The value in proposed is set. if 0 ignore proposed</p>
+</div><span id='structfield.current' class='structfield'><code>current: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a>c_char</code>
+                           </span><span class='stab '></span><div class='docblock'><p>Current value (stored in memory)</p>
+</div><span id='structfield.proposed' class='structfield'><code>proposed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a>c_char</code>
+                           </span><span class='stab '></span><div class='docblock'><p>New value to change to (const, so no updates please)</p>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
