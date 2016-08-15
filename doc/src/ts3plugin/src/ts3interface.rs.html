@@ -917,10 +917,120 @@
 <span id="873">873</span>
 <span id="874">874</span>
 <span id="875">875</span>
+<span id="876">876</span>
+<span id="877">877</span>
+<span id="878">878</span>
+<span id="879">879</span>
+<span id="880">880</span>
+<span id="881">881</span>
+<span id="882">882</span>
+<span id="883">883</span>
+<span id="884">884</span>
+<span id="885">885</span>
+<span id="886">886</span>
+<span id="887">887</span>
+<span id="888">888</span>
+<span id="889">889</span>
+<span id="890">890</span>
+<span id="891">891</span>
+<span id="892">892</span>
+<span id="893">893</span>
+<span id="894">894</span>
+<span id="895">895</span>
+<span id="896">896</span>
+<span id="897">897</span>
+<span id="898">898</span>
+<span id="899">899</span>
+<span id="900">900</span>
+<span id="901">901</span>
+<span id="902">902</span>
+<span id="903">903</span>
+<span id="904">904</span>
+<span id="905">905</span>
+<span id="906">906</span>
+<span id="907">907</span>
+<span id="908">908</span>
+<span id="909">909</span>
+<span id="910">910</span>
+<span id="911">911</span>
+<span id="912">912</span>
+<span id="913">913</span>
+<span id="914">914</span>
+<span id="915">915</span>
+<span id="916">916</span>
+<span id="917">917</span>
+<span id="918">918</span>
+<span id="919">919</span>
+<span id="920">920</span>
+<span id="921">921</span>
+<span id="922">922</span>
+<span id="923">923</span>
+<span id="924">924</span>
+<span id="925">925</span>
+<span id="926">926</span>
+<span id="927">927</span>
+<span id="928">928</span>
+<span id="929">929</span>
+<span id="930">930</span>
+<span id="931">931</span>
+<span id="932">932</span>
+<span id="933">933</span>
+<span id="934">934</span>
+<span id="935">935</span>
+<span id="936">936</span>
+<span id="937">937</span>
+<span id="938">938</span>
+<span id="939">939</span>
+<span id="940">940</span>
+<span id="941">941</span>
+<span id="942">942</span>
+<span id="943">943</span>
+<span id="944">944</span>
+<span id="945">945</span>
+<span id="946">946</span>
+<span id="947">947</span>
+<span id="948">948</span>
+<span id="949">949</span>
+<span id="950">950</span>
+<span id="951">951</span>
+<span id="952">952</span>
+<span id="953">953</span>
+<span id="954">954</span>
+<span id="955">955</span>
+<span id="956">956</span>
+<span id="957">957</span>
+<span id="958">958</span>
+<span id="959">959</span>
+<span id="960">960</span>
+<span id="961">961</span>
+<span id="962">962</span>
+<span id="963">963</span>
+<span id="964">964</span>
+<span id="965">965</span>
+<span id="966">966</span>
+<span id="967">967</span>
+<span id="968">968</span>
+<span id="969">969</span>
+<span id="970">970</span>
+<span id="971">971</span>
+<span id="972">972</span>
+<span id="973">973</span>
+<span id="974">974</span>
+<span id="975">975</span>
+<span id="976">976</span>
+<span id="977">977</span>
+<span id="978">978</span>
+<span id="979">979</span>
+<span id="980">980</span>
+<span id="981">981</span>
+<span id="982">982</span>
+<span id="983">983</span>
+<span id="984">984</span>
 </pre><pre class='rust '>
-<span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_char</span>, <span class='ident'>c_int</span>, <span class='ident'>c_uint</span>};
+<span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_char</span>, <span class='ident'>c_int</span>, <span class='ident'>c_short</span>, <span class='ident'>c_uint</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>ffi</span>::<span class='ident'>CStr</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>mem</span>::<span class='ident'>transmute</span>;
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>slice</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>sync</span>::<span class='ident'>mpsc</span>::{<span class='ident'>channel</span>, <span class='ident'>Sender</span>};
 
 <span class='kw'>use</span> <span class='ident'>ts3plugin_sys</span>::<span class='ident'>clientlib_publicdefinitions</span>::<span class='op'>*</span>;
@@ -989,6 +1099,10 @@
     <span class='ident'>PermissionError</span>(::<span class='ident'>ServerId</span>, ::<span class='ident'>PermissionId</span>, ::<span class='ident'>Error</span>, <span class='ident'>String</span>, <span class='ident'>String</span>),
     <span class='ident'>Message</span>(::<span class='ident'>ServerId</span>, ::<span class='ident'>TextMessageTargetMode</span>, <span class='ident'>u16</span>, ::<span class='ident'>Invoker</span>, <span class='ident'>String</span>, <span class='ident'>bool</span>),
     <span class='ident'>Poke</span>(::<span class='ident'>ServerId</span>, ::<span class='ident'>Invoker</span>, <span class='ident'>String</span>, <span class='ident'>bool</span>),
+    <span class='ident'>PlaybackVoiceData</span>(::<span class='ident'>ServerId</span>, ::<span class='ident'>ConnectionId</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>i16</span>, <span class='ident'>usize</span>, <span class='ident'>u32</span>),
+    <span class='ident'>PostProcessVoiceData</span>(::<span class='ident'>ServerId</span>, ::<span class='ident'>ConnectionId</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>i16</span>, <span class='ident'>usize</span>, <span class='ident'>u32</span>, <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_uint</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_uint</span>),
+    <span class='ident'>MixedPlaybackVoiceData</span>(::<span class='ident'>ServerId</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>i16</span>, <span class='ident'>usize</span>, <span class='ident'>u32</span>, <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_uint</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_uint</span>),
+    <span class='ident'>CapturedVoiceData</span>(::<span class='ident'>ServerId</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>i16</span>, <span class='ident'>usize</span>, <span class='ident'>u32</span>, <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_int</span>),
 }
 
 <span class='doccomment'>/// The manager thread calls plugin functions on events.</span>
@@ -1405,6 +1519,55 @@
                         <span class='ident'>api</span>.<span class='ident'>try_update_invoker</span>(<span class='ident'>server_id</span>, <span class='kw-2'>&amp;</span><span class='ident'>invoker</span>);
                         <span class='ident'>ReturnValue</span>(<span class='ident'>plugin</span>.<span class='ident'>poke</span>(<span class='kw-2'>&amp;</span><span class='ident'>api</span>, <span class='ident'>server_id</span>, <span class='ident'>invoker</span>, <span class='ident'>message</span>, <span class='ident'>ignored</span>))
                     },
+                    <span class='ident'>ReturningCall</span>::<span class='ident'>PlaybackVoiceData</span>(<span class='ident'>server_id</span>, <span class='ident'>connection_id</span>,
+                        <span class='ident'>samples</span>, <span class='ident'>sample_count</span>, <span class='ident'>channels</span>) <span class='op'>=&gt;</span> {
+                        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>samples</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>slice</span>::<span class='ident'>from_raw_parts_mut</span>(<span class='ident'>samples</span>, <span class='ident'>sample_count</span> <span class='op'>*</span> <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>usize</span>) };
+                        <span class='ident'>plugin</span>.<span class='ident'>playback_voice_data</span>(<span class='kw-2'>&amp;</span><span class='ident'>api</span>, <span class='ident'>server_id</span>, <span class='ident'>connection_id</span>, <span class='ident'>samples</span>, <span class='ident'>channels</span>);
+                        <span class='comment'>// The plugin is ready with editing the voice data so we can return now</span>
+                        <span class='ident'>ReturnValue</span>(<span class='bool-val'>true</span>)
+                    },
+                    <span class='ident'>ReturningCall</span>::<span class='ident'>PostProcessVoiceData</span>(<span class='ident'>server_id</span>, <span class='ident'>connection_id</span>,
+                        <span class='ident'>samples</span>, <span class='ident'>sample_count</span>, <span class='ident'>channels</span>, <span class='ident'>channel_speaker_array</span>,
+                        <span class='ident'>channel_fill_mask</span>) <span class='op'>=&gt;</span> {
+                        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>samples</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>slice</span>::<span class='ident'>from_raw_parts_mut</span>(<span class='ident'>samples</span>,
+                            <span class='ident'>sample_count</span> <span class='op'>*</span> <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>usize</span>) };
+                        <span class='kw'>let</span> <span class='ident'>channel_speaker_array</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
+                            <span class='ident'>slice</span>::<span class='ident'>from_raw_parts</span>(<span class='ident'>channel_speaker_array</span> <span class='kw'>as</span> <span class='op'>*</span><span class='kw-2'>mut</span> ::<span class='ident'>Speaker</span>,
+                                <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>usize</span>) };
+                        <span class='ident'>plugin</span>.<span class='ident'>post_process_voice_data</span>(<span class='kw-2'>&amp;</span><span class='ident'>api</span>, <span class='ident'>server_id</span>, <span class='ident'>connection_id</span>,
+                            <span class='ident'>samples</span>, <span class='ident'>channels</span>, <span class='ident'>channel_speaker_array</span>,
+                            <span class='kw'>unsafe</span> { <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='op'>*</span><span class='ident'>channel_fill_mask</span> });
+                        <span class='comment'>// The plugin is ready with editing the voice data so we can return now</span>
+                        <span class='ident'>ReturnValue</span>(<span class='bool-val'>true</span>)
+                    },
+                    <span class='ident'>ReturningCall</span>::<span class='ident'>MixedPlaybackVoiceData</span>(<span class='ident'>server_id</span>, <span class='ident'>samples</span>,
+                        <span class='ident'>sample_count</span>, <span class='ident'>channels</span>, <span class='ident'>channel_speaker_array</span>,
+                        <span class='ident'>channel_fill_mask</span>) <span class='op'>=&gt;</span> {
+                        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>samples</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>slice</span>::<span class='ident'>from_raw_parts_mut</span>(<span class='ident'>samples</span>,
+                            <span class='ident'>sample_count</span> <span class='op'>*</span> <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>usize</span>) };
+                        <span class='kw'>let</span> <span class='ident'>channel_speaker_array</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
+                            <span class='ident'>slice</span>::<span class='ident'>from_raw_parts</span>(<span class='ident'>channel_speaker_array</span> <span class='kw'>as</span> <span class='op'>*</span><span class='kw-2'>mut</span> ::<span class='ident'>Speaker</span>,
+                                <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>usize</span>) };
+                        <span class='ident'>plugin</span>.<span class='ident'>mixed_playback_voice_data</span>(<span class='kw-2'>&amp;</span><span class='ident'>api</span>, <span class='ident'>server_id</span>,
+                            <span class='ident'>samples</span>, <span class='ident'>channels</span>, <span class='ident'>channel_speaker_array</span>,
+                            <span class='kw'>unsafe</span> { <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='op'>*</span><span class='ident'>channel_fill_mask</span> });
+                        <span class='comment'>// The plugin is ready with editing the voice data so we can return now</span>
+                        <span class='ident'>ReturnValue</span>(<span class='bool-val'>true</span>)
+                    },
+                    <span class='ident'>ReturningCall</span>::<span class='ident'>CapturedVoiceData</span>(<span class='ident'>server_id</span>, <span class='ident'>samples</span>,
+                        <span class='ident'>sample_count</span>, <span class='ident'>channels</span>, <span class='ident'>edited</span>) <span class='op'>=&gt;</span> {
+                        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>samples</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>slice</span>::<span class='ident'>from_raw_parts_mut</span>(<span class='ident'>samples</span>,
+                            <span class='ident'>sample_count</span> <span class='op'>*</span> <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>usize</span>) };
+                        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>send</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='op'>*</span><span class='ident'>edited</span> } <span class='kw-2'>&amp;</span> <span class='number'>2</span> <span class='op'>!=</span> <span class='number'>0</span>;
+                        <span class='kw'>unsafe</span> {
+                            <span class='op'>*</span><span class='ident'>edited</span> <span class='op'>|=</span> <span class='ident'>plugin</span>.<span class='ident'>captured_voice_data</span>(<span class='kw-2'>&amp;</span><span class='ident'>api</span>, <span class='ident'>server_id</span>,
+                                <span class='ident'>samples</span>, <span class='ident'>channels</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>send</span>) <span class='kw'>as</span> <span class='ident'>c_int</span>;
+                            <span class='comment'>// Set the second bit of `edited` to `send`</span>
+                            <span class='op'>*</span><span class='ident'>edited</span> <span class='op'>=</span> (<span class='op'>*</span><span class='ident'>edited</span> <span class='kw-2'>&amp;</span> <span class='op'>!</span><span class='number'>2</span>) <span class='op'>|</span> ((<span class='ident'>send</span> <span class='kw'>as</span> <span class='ident'>c_int</span>) <span class='op'>&lt;&lt;</span> <span class='number'>1</span>);
+                        }
+                        <span class='comment'>// The plugin is ready with editing the voice data so we can return now</span>
+                        <span class='ident'>ReturnValue</span>(<span class='bool-val'>true</span>)
+                    },
                 }).<span class='ident'>unwrap</span>();
             },
             <span class='ident'>FunctionCall</span>::<span class='ident'>Quit</span> <span class='op'>=&gt;</span> {
@@ -1792,6 +1955,61 @@
         <span class='macro'>to_string</span><span class='macro'>!</span>(<span class='ident'>return_code</span>)))).<span class='ident'>unwrap</span>();
     <span class='kw'>let</span> <span class='ident'>ReturnValue</span>(<span class='ident'>b</span>) <span class='op'>=</span> <span class='ident'>receiver</span>.<span class='ident'>recv</span>().<span class='ident'>unwrap</span>();
     <span class='kw'>if</span> <span class='ident'>b</span> { <span class='number'>1</span> } <span class='kw'>else</span> { <span class='number'>0</span> }
+}
+
+<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
+<span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
+<span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>unsafe</span> <span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> <span class='kw'>fn</span> <span class='ident'>ts3plugin_onEditPlaybackVoiceDataEvent</span>(<span class='ident'>server_id</span>: <span class='ident'>u64</span>,
+    <span class='ident'>connection_id</span>: <span class='ident'>u16</span>, <span class='ident'>samples</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_short</span>, <span class='ident'>sample_count</span>: <span class='ident'>c_int</span>, <span class='ident'>channels</span>: <span class='ident'>c_int</span>) {
+    <span class='kw'>let</span> (<span class='ident'>sender</span>, <span class='ident'>receiver</span>) <span class='op'>=</span> <span class='ident'>channel</span>();
+    (<span class='op'>*</span><span class='ident'>TX</span>.<span class='ident'>unwrap</span>()).<span class='ident'>send</span>(<span class='ident'>FunctionCall</span>::<span class='ident'>ReturningCall</span>(<span class='ident'>sender</span>,
+        <span class='ident'>ReturningCall</span>::<span class='ident'>PlaybackVoiceData</span>(::<span class='ident'>ServerId</span>(<span class='ident'>server_id</span>),
+        ::<span class='ident'>ConnectionId</span>(<span class='ident'>connection_id</span>),
+        <span class='ident'>samples</span>, <span class='ident'>sample_count</span> <span class='kw'>as</span> <span class='ident'>usize</span>,
+        <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>u32</span>))).<span class='ident'>unwrap</span>();
+    <span class='ident'>receiver</span>.<span class='ident'>recv</span>().<span class='ident'>unwrap</span>();
+}
+
+<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
+<span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
+<span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>unsafe</span> <span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> <span class='kw'>fn</span> <span class='ident'>ts3plugin_onEditPostProcessVoiceDataEvent</span>(<span class='ident'>server_id</span>: <span class='ident'>u64</span>,
+    <span class='ident'>connection_id</span>: <span class='ident'>u16</span>, <span class='ident'>samples</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_short</span>, <span class='ident'>sample_count</span>: <span class='ident'>c_int</span>, <span class='ident'>channels</span>: <span class='ident'>c_int</span>,
+    <span class='ident'>channel_speaker_array</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_uint</span>, <span class='ident'>channel_fill_mask</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_uint</span>) {
+    <span class='kw'>let</span> (<span class='ident'>sender</span>, <span class='ident'>receiver</span>) <span class='op'>=</span> <span class='ident'>channel</span>();
+    (<span class='op'>*</span><span class='ident'>TX</span>.<span class='ident'>unwrap</span>()).<span class='ident'>send</span>(<span class='ident'>FunctionCall</span>::<span class='ident'>ReturningCall</span>(<span class='ident'>sender</span>,
+        <span class='ident'>ReturningCall</span>::<span class='ident'>PostProcessVoiceData</span>(::<span class='ident'>ServerId</span>(<span class='ident'>server_id</span>),
+        ::<span class='ident'>ConnectionId</span>(<span class='ident'>connection_id</span>),
+        <span class='ident'>samples</span>, <span class='ident'>sample_count</span> <span class='kw'>as</span> <span class='ident'>usize</span>, <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>u32</span>, <span class='ident'>channel_speaker_array</span>,
+        <span class='ident'>channel_fill_mask</span>))).<span class='ident'>unwrap</span>();
+    <span class='ident'>receiver</span>.<span class='ident'>recv</span>().<span class='ident'>unwrap</span>();
+}
+
+<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
+<span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
+<span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>unsafe</span> <span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> <span class='kw'>fn</span> <span class='ident'>ts3plugin_onEditMixedPlaybackVoiceDataEvent</span>(<span class='ident'>server_id</span>: <span class='ident'>u64</span>,
+    <span class='ident'>samples</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_short</span>, <span class='ident'>sample_count</span>: <span class='ident'>c_int</span>, <span class='ident'>channels</span>: <span class='ident'>c_int</span>,
+    <span class='ident'>channel_speaker_array</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_uint</span>, <span class='ident'>channel_fill_mask</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_uint</span>) {
+    <span class='kw'>let</span> (<span class='ident'>sender</span>, <span class='ident'>receiver</span>) <span class='op'>=</span> <span class='ident'>channel</span>();
+    (<span class='op'>*</span><span class='ident'>TX</span>.<span class='ident'>unwrap</span>()).<span class='ident'>send</span>(<span class='ident'>FunctionCall</span>::<span class='ident'>ReturningCall</span>(<span class='ident'>sender</span>,
+        <span class='ident'>ReturningCall</span>::<span class='ident'>MixedPlaybackVoiceData</span>(::<span class='ident'>ServerId</span>(<span class='ident'>server_id</span>),
+        <span class='ident'>samples</span>, <span class='ident'>sample_count</span> <span class='kw'>as</span> <span class='ident'>usize</span>, <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>u32</span>, <span class='ident'>channel_speaker_array</span>,
+        <span class='ident'>channel_fill_mask</span>))).<span class='ident'>unwrap</span>();
+    <span class='ident'>receiver</span>.<span class='ident'>recv</span>().<span class='ident'>unwrap</span>();
+}
+
+<span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_snake_case</span>)]</span>
+<span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
+<span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>unsafe</span> <span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> <span class='kw'>fn</span> <span class='ident'>ts3plugin_onEditCapturedVoiceDataEvent</span>(<span class='ident'>server_id</span>: <span class='ident'>u64</span>,
+    <span class='ident'>samples</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_short</span>, <span class='ident'>sample_count</span>: <span class='ident'>c_int</span>, <span class='ident'>channels</span>: <span class='ident'>c_int</span>, <span class='ident'>edited</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_int</span>) {
+    <span class='kw'>let</span> (<span class='ident'>sender</span>, <span class='ident'>receiver</span>) <span class='op'>=</span> <span class='ident'>channel</span>();
+    (<span class='op'>*</span><span class='ident'>TX</span>.<span class='ident'>unwrap</span>()).<span class='ident'>send</span>(<span class='ident'>FunctionCall</span>::<span class='ident'>ReturningCall</span>(<span class='ident'>sender</span>,
+        <span class='ident'>ReturningCall</span>::<span class='ident'>CapturedVoiceData</span>(::<span class='ident'>ServerId</span>(<span class='ident'>server_id</span>),
+        <span class='ident'>samples</span>, <span class='ident'>sample_count</span> <span class='kw'>as</span> <span class='ident'>usize</span>, <span class='ident'>channels</span> <span class='kw'>as</span> <span class='ident'>u32</span>, <span class='ident'>edited</span>))).<span class='ident'>unwrap</span>();
+    <span class='ident'>receiver</span>.<span class='ident'>recv</span>().<span class='ident'>unwrap</span>();
 }
 </pre>
 </section>

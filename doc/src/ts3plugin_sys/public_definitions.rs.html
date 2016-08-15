@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/home/sebi/.cargo/registry/src/github.com-1ecc6299db9ec823/ts3plugin-sys-0.1.0/src/public_definitions.rs`.">
+    <meta name="description" content="Source to the Rust file `/home/sebi/.cargo/registry/src/github.com-1ecc6299db9ec823/ts3plugin-sys-0.2.0/src/public_definitions.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>public_definitions.rs.html -- source</title>
@@ -990,6 +990,9 @@
 <span id="946">946</span>
 <span id="947">947</span>
 <span id="948">948</span>
+<span id="949">949</span>
+<span id="950">950</span>
+<span id="951">951</span>
 </pre><pre class='rust '>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>dead_code</span>)]</span>
 
@@ -1029,27 +1032,30 @@
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>MAX_VARIABLES_EXPORT_COUNT</span>:                <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>64</span>;
 
 <span class='doccomment'>/// Speaker locations used by some sound callbacks</span>
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_LEFT</span>:            <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x1</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_RIGHT</span>:           <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x2</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_CENTER</span>:          <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x4</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_LOW_FREQUENCY</span>:         <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x8</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_BACK_LEFT</span>:             <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x10</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_BACK_RIGHT</span>:            <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x20</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_LEFT_OF_CENTER</span>:  <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x40</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_RIGHT_OF_CENTER</span>: <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x80</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_BACK_CENTER</span>:           <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x100</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_SIDE_LEFT</span>:             <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x200</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_SIDE_RIGHT</span>:            <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x400</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_CENTER</span>:            <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x800</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_FRONT_LEFT</span>:        <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x1000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_FRONT_CENTER</span>:      <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x2000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_FRONT_RIGHT</span>:       <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x4000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_BACK_LEFT</span>:         <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x8000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_BACK_CENTER</span>:       <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x10000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_BACK_RIGHT</span>:        <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x20000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_HEADPHONES_LEFT</span>:       <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x40000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_HEADPHONES_RIGHT</span>:      <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x40000</span>;
-<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SPEAKER_MONO</span>:                  <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>0x40000</span>;
+<span class='macro'>bitflags</span><span class='macro'>!</span> {
+<span class='kw'>pub</span> <span class='ident'>flags</span> <span class='ident'>Speaker</span>: <span class='ident'>c_uint</span> {
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_LEFT</span>            <span class='op'>=</span> <span class='number'>0x00001</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_RIGHT</span>           <span class='op'>=</span> <span class='number'>0x00002</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_CENTER</span>          <span class='op'>=</span> <span class='number'>0x00004</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_LOW_FREQUENCY</span>         <span class='op'>=</span> <span class='number'>0x00008</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_BACK_LEFT</span>             <span class='op'>=</span> <span class='number'>0x00010</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_BACK_RIGHT</span>            <span class='op'>=</span> <span class='number'>0x00020</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_LEFT_OF_CENTER</span>  <span class='op'>=</span> <span class='number'>0x00040</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_FRONT_RIGHT_OF_CENTER</span> <span class='op'>=</span> <span class='number'>0x00080</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_BACK_CENTER</span>           <span class='op'>=</span> <span class='number'>0x00100</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_SIDE_LEFT</span>             <span class='op'>=</span> <span class='number'>0x00200</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_SIDE_RIGHT</span>            <span class='op'>=</span> <span class='number'>0x00400</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_CENTER</span>            <span class='op'>=</span> <span class='number'>0x00800</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_FRONT_LEFT</span>        <span class='op'>=</span> <span class='number'>0x01000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_FRONT_CENTER</span>      <span class='op'>=</span> <span class='number'>0x02000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_FRONT_RIGHT</span>       <span class='op'>=</span> <span class='number'>0x04000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_BACK_LEFT</span>         <span class='op'>=</span> <span class='number'>0x08000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_BACK_CENTER</span>       <span class='op'>=</span> <span class='number'>0x10000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_TOP_BACK_RIGHT</span>        <span class='op'>=</span> <span class='number'>0x20000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_HEADPHONES_LEFT</span>       <span class='op'>=</span> <span class='number'>0x10000000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_HEADPHONES_RIGHT</span>      <span class='op'>=</span> <span class='number'>0x20000000</span>,
+    <span class='kw'>const</span> <span class='ident'>SPEAKER_MONO</span>                  <span class='op'>=</span> <span class='number'>0x40000000</span>,
+}}
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
@@ -1356,7 +1362,7 @@
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, only valid with PERMISSION feature, contains channel_id where the channel_group_id is set from</span>
     <span class='ident'>ChannelGroupInheritedChannelId</span>,
     <span class='doccomment'>/// Automatically up-to-date for any client &quot;in view&quot;, stores icons for partner badges</span>
-    <span class='ident'>Badges</span>, 
+    <span class='ident'>Badges</span>,
     <span class='ident'>Endmarker</span>
 }
 
@@ -1419,9 +1425,9 @@
     <span class='ident'>MaxDownloadTotalBandwidth</span>,
     <span class='doccomment'>/// Only available on request (=&gt; requestServerVariables)</span>
     <span class='ident'>MaxUploadTotalBandwidth</span>,
-    <span class='doccomment'>/// Available when connected, always up-to-date </span>
+    <span class='doccomment'>/// Available when connected, always up-to-date</span>
     <span class='ident'>HostbannerUrl</span>,
-    <span class='doccomment'>/// Available when connected, always up-to-date </span>
+    <span class='doccomment'>/// Available when connected, always up-to-date</span>
     <span class='ident'>HostbannerGfxUrl</span>,
     <span class='doccomment'>/// Available when connected, always up-to-date</span>
     <span class='ident'>HostbannerGfxInterval</span>,
@@ -1899,7 +1905,7 @@
 }
 
 <span class='macro'>bitflags</span><span class='macro'>!</span> {
-<span class='ident'>flags</span> <span class='ident'>BBCodeTags</span>: <span class='ident'>u32</span> {
+<span class='kw'>pub</span> <span class='ident'>flags</span> <span class='ident'>BBCodeTags</span>: <span class='ident'>u32</span> {
     <span class='kw'>const</span> <span class='ident'>B</span>           <span class='op'>=</span> <span class='number'>0x00000001</span>,
     <span class='kw'>const</span> <span class='ident'>I</span>           <span class='op'>=</span> <span class='number'>0x00000002</span>,
     <span class='kw'>const</span> <span class='ident'>U</span>           <span class='op'>=</span> <span class='number'>0x00000004</span>,

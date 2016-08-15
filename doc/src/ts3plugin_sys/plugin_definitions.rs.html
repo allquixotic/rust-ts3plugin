@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/home/sebi/.cargo/registry/src/github.com-1ecc6299db9ec823/ts3plugin-sys-0.1.0/src/plugin_definitions.rs`.">
+    <meta name="description" content="Source to the Rust file `/home/sebi/.cargo/registry/src/github.com-1ecc6299db9ec823/ts3plugin-sys-0.2.0/src/plugin_definitions.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>plugin_definitions.rs.html -- source</title>
@@ -182,37 +182,37 @@
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ConfigureOffer</span>
 {
     <span class='doccomment'>/// Plugin does not implement ts3plugin_configure</span>
-	<span class='ident'>No</span> <span class='op'>=</span> <span class='number'>0</span>,
-	<span class='doccomment'>/// Plugin does implement ts3plugin_configure and requests to run this function in an own thread</span>
-	<span class='ident'>NewThread</span>,
-	<span class='doccomment'>/// Plugin does implement ts3plugin_configure and requests to run this function in the Qt GUI thread</span>
-	<span class='ident'>QtThread</span>
+    <span class='ident'>No</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='doccomment'>/// Plugin does implement ts3plugin_configure and requests to run this function in an own thread</span>
+    <span class='ident'>NewThread</span>,
+    <span class='doccomment'>/// Plugin does implement ts3plugin_configure and requests to run this function in the Qt GUI thread</span>
+    <span class='ident'>QtThread</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MessageTarget</span>
 {
-	<span class='ident'>Server</span> <span class='op'>=</span> <span class='number'>0</span>,
-	<span class='ident'>Channel</span>
+    <span class='ident'>Server</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='ident'>Channel</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ItemType</span>
 {
-	<span class='ident'>Server</span> <span class='op'>=</span> <span class='number'>0</span>,
-	<span class='ident'>Channel</span>,
-	<span class='ident'>Client</span>
+    <span class='ident'>Server</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='ident'>Channel</span>,
+    <span class='ident'>Client</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MenuType</span>
 {
-	<span class='ident'>Global</span> <span class='op'>=</span> <span class='number'>0</span>,
-	<span class='ident'>Channel</span>,
-	<span class='ident'>Client</span>
+    <span class='ident'>Global</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='ident'>Channel</span>,
+    <span class='ident'>Client</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
@@ -276,20 +276,20 @@
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>GuiProfile</span>
 {
-	<span class='ident'>SoundCapture</span> <span class='op'>=</span> <span class='number'>0</span>,
-	<span class='ident'>SoundPlayback</span>,
-	<span class='ident'>Hotkey</span>,
-	<span class='ident'>Soundpack</span>,
-	<span class='ident'>Identity</span>
+    <span class='ident'>SoundCapture</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='ident'>SoundPlayback</span>,
+    <span class='ident'>Hotkey</span>,
+    <span class='ident'>Soundpack</span>,
+    <span class='ident'>Identity</span>
 }
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>, <span class='ident'>Eq</span>, <span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>ConnectTab</span>
 {
-	<span class='ident'>New</span> <span class='op'>=</span> <span class='number'>0</span>,
-	<span class='ident'>Current</span>,
-	<span class='ident'>NewIfCurrentConnected</span>
+    <span class='ident'>New</span> <span class='op'>=</span> <span class='number'>0</span>,
+    <span class='ident'>Current</span>,
+    <span class='ident'>NewIfCurrentConnected</span>
 }
 </pre>
 </section>
