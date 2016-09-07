@@ -324,6 +324,11 @@
 <span id="280">280</span>
 <span id="281">281</span>
 <span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
 </pre><pre class='rust '>
 <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>no_inline</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_char</span>, <span class='ident'>c_int</span>};
@@ -346,10 +351,10 @@
 <span class='doccomment'>/// working TeamSpeak plugin you have to call the macro `create_plugin!`</span>
 <span class='doccomment'>/// afterwards.</span>
 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unused_variables</span>)]</span>
-<span class='kw'>pub</span> <span class='kw'>trait</span> <span class='ident'>Plugin</span> {
+<span class='kw'>pub</span> <span class='kw'>trait</span> <span class='ident'>Plugin</span>: <span class='lifetime'>&#39;static</span> <span class='op'>+</span> <span class='ident'>Send</span> {
     <span class='comment'>// ************************** Required functions ***************************</span>
-    <span class='comment'>// Custom code called right after loading the plugin.</span>
-    <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='kw-2'>&amp;</span><span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>Box</span><span class='op'>&lt;</span><span class='self'>Self</span><span class='op'>&gt;</span>, <span class='ident'>InitError</span><span class='op'>&gt;</span> <span class='kw'>where</span> <span class='self'>Self</span>: <span class='ident'>Sized</span>;
+    <span class='doccomment'>/// Called when the plugin is loaded by TeamSpeak.</span>
+    <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>Box</span><span class='op'>&lt;</span><span class='self'>Self</span><span class='op'>&gt;</span>, <span class='ident'>InitError</span><span class='op'>&gt;</span> <span class='kw'>where</span> <span class='self'>Self</span>: <span class='ident'>Sized</span>;
 
     <span class='doccomment'>/// If the connection status changes.</span>
     <span class='doccomment'>/// If `status = ConnectStatus::Connecting`, the connection_id is not yet</span>
@@ -361,7 +366,7 @@
 
     <span class='doccomment'>/// Return `false` if the TeamSpeak client should handle the error normally or</span>
     <span class='doccomment'>/// `true` if the client should ignore the error.</span>
-    <span class='kw'>fn</span> <span class='ident'>server_error</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
+    <span class='kw'>fn</span> <span class='ident'>server_error</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
         <span class='ident'>error</span>: ::<span class='ident'>Error</span>, <span class='ident'>message</span>: <span class='ident'>String</span>, <span class='ident'>return_code</span>: <span class='ident'>String</span>,
         <span class='ident'>extra_message</span>: <span class='ident'>String</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> { <span class='bool-val'>false</span> }
 
@@ -430,14 +435,14 @@
     <span class='doccomment'>/// of TeamSpeak ignored the message.</span>
     <span class='doccomment'>/// Return `false` if the TeamSpeak client should handle the message normally or</span>
     <span class='doccomment'>/// `true` if the client should ignore the message.</span>
-    <span class='kw'>fn</span> <span class='ident'>message</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>, <span class='ident'>invoker</span>: ::<span class='ident'>Invoker</span>,
+    <span class='kw'>fn</span> <span class='ident'>message</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>, <span class='ident'>invoker</span>: ::<span class='ident'>Invoker</span>,
         <span class='ident'>target</span>: ::<span class='ident'>MessageReceiver</span>, <span class='ident'>message</span>: <span class='ident'>String</span>, <span class='ident'>ignored</span>: <span class='ident'>bool</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> { <span class='bool-val'>false</span> }
 
     <span class='doccomment'>/// A user poked us. `ignored` describes, if the friend and fool system</span>
     <span class='doccomment'>/// of TeamSpeak ignored the message.</span>
     <span class='doccomment'>/// Return `false` if the TeamSpeak client should handle the poke normally or</span>
     <span class='doccomment'>/// `true` if the client should ignore the poke.</span>
-    <span class='kw'>fn</span> <span class='ident'>poke</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>, <span class='ident'>invoker</span>: ::<span class='ident'>Invoker</span>,
+    <span class='kw'>fn</span> <span class='ident'>poke</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>, <span class='ident'>invoker</span>: ::<span class='ident'>Invoker</span>,
         <span class='ident'>message</span>: <span class='ident'>String</span>, <span class='ident'>ignored</span>: <span class='ident'>bool</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> { <span class='bool-val'>false</span> }
 
     <span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
@@ -471,17 +476,23 @@
 
     <span class='doccomment'>/// The voice data is available as 16 bit with 48 KHz. The channels are packed</span>
     <span class='doccomment'>/// (interleaved).</span>
-    <span class='kw'>fn</span> <span class='ident'>playback_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
-        <span class='ident'>connection_id</span>: ::<span class='ident'>ConnectionId</span>, <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>u32</span>) {}
+    <span class='doccomment'>/// The callbacks with audio data are called from another thread than the</span>
+    <span class='doccomment'>/// other functions.</span>
+    <span class='kw'>fn</span> <span class='ident'>playback_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
+        <span class='ident'>connection_id</span>: ::<span class='ident'>ConnectionId</span>, <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>i32</span>) {}
 
+    <span class='doccomment'>/// The callbacks with audio data are called from another thread than the</span>
+    <span class='doccomment'>/// other functions.</span>
     <span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
-    <span class='kw'>fn</span> <span class='ident'>post_process_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
-        <span class='ident'>connection_id</span>: ::<span class='ident'>ConnectionId</span>, <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>u32</span>,
+    <span class='kw'>fn</span> <span class='ident'>post_process_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
+        <span class='ident'>connection_id</span>: ::<span class='ident'>ConnectionId</span>, <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>i32</span>,
         <span class='ident'>channel_speaker_array</span>: <span class='kw-2'>&amp;</span>[::<span class='ident'>Speaker</span>], <span class='ident'>channel_fill_mask</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>u32</span>) {}
 
+    <span class='doccomment'>/// The callbacks with audio data are called from another thread than the</span>
+    <span class='doccomment'>/// other functions.</span>
     <span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
-    <span class='kw'>fn</span> <span class='ident'>mixed_playback_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
-        <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>u32</span>, <span class='ident'>channel_speaker_array</span>: <span class='kw-2'>&amp;</span>[::<span class='ident'>Speaker</span>],
+    <span class='kw'>fn</span> <span class='ident'>mixed_playback_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
+        <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>i32</span>, <span class='ident'>channel_speaker_array</span>: <span class='kw-2'>&amp;</span>[::<span class='ident'>Speaker</span>],
         <span class='ident'>channel_fill_mask</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>u32</span>) {}
 
     <span class='doccomment'>/// The recorded sound from the current capture device.</span>
@@ -489,19 +500,21 @@
     <span class='doccomment'>/// can be changed in this callback.</span>
     <span class='doccomment'>/// The return value of this function describes if the sound data was altered.</span>
     <span class='doccomment'>/// Return `true` if the sound was changed and `false` otherwise.</span>
+    <span class='doccomment'>/// The callbacks with audio data are called from another thread than the</span>
+    <span class='doccomment'>/// other functions.</span>
     <span class='attribute'>#[<span class='ident'>cfg_attr</span>(<span class='ident'>feature</span><span class='op'>=</span><span class='string'>&quot;clippy&quot;</span>, <span class='ident'>allow</span>(<span class='ident'>too_many_arguments</span>))]</span>
-    <span class='kw'>fn</span> <span class='ident'>captured_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
-        <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>u32</span>, <span class='ident'>send</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>bool</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> { <span class='bool-val'>false</span> }
+    <span class='kw'>fn</span> <span class='ident'>captured_voice_data</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
+        <span class='ident'>samples</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>i16</span>], <span class='ident'>channels</span>: <span class='ident'>i32</span>, <span class='ident'>send</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>bool</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> { <span class='bool-val'>false</span> }
 
     <span class='doccomment'>/// Return `false` if the TeamSpeak client should handle the error normally or</span>
     <span class='doccomment'>/// `true` if the client should ignore the error.</span>
-    <span class='kw'>fn</span> <span class='ident'>permission_error</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
+    <span class='kw'>fn</span> <span class='ident'>permission_error</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>, <span class='ident'>server_id</span>: ::<span class='ident'>ServerId</span>,
         <span class='ident'>permission_id</span>: ::<span class='ident'>PermissionId</span>, <span class='ident'>error</span>: ::<span class='ident'>Error</span>, <span class='ident'>message</span>: <span class='ident'>String</span>,
         <span class='ident'>return_code</span>: <span class='ident'>String</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> { <span class='bool-val'>false</span> }
 
     <span class='doccomment'>/// Called if the plugin is disabled (either by the user or if TeamSpeak is</span>
     <span class='doccomment'>/// exiting).</span>
-    <span class='kw'>fn</span> <span class='ident'>shutdown</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span>::<span class='ident'>TsApi</span>) {}
+    <span class='kw'>fn</span> <span class='ident'>shutdown</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> ::<span class='ident'>TsApi</span>) {}
 }
 
 <span class='doccomment'>/// Create a plugin. This macro has to be called once per library to create the</span>
@@ -540,11 +553,8 @@
 
         <span class='attribute'>#[<span class='ident'>no_mangle</span>]</span>
         <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
-        <span class='kw'>pub</span> <span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> <span class='kw'>fn</span> <span class='ident'>ts3plugin_init</span>() <span class='op'>-&gt;</span> <span class='ident'>c_int</span> {
-            <span class='kw'>let</span> (<span class='ident'>sender</span>, <span class='ident'>receiver</span>) <span class='op'>=</span> <span class='ident'>std</span>::<span class='ident'>sync</span>::<span class='ident'>mpsc</span>::<span class='ident'>channel</span>();
-            <span class='ident'>std</span>::<span class='ident'>thread</span>::<span class='ident'>spawn</span>(<span class='kw'>move</span> <span class='op'>||</span>
-                <span class='macro-nonterminal'>$</span><span class='kw'>crate</span>::<span class='macro-nonterminal'>ts3interface</span>::<span class='ident'>manager_thread</span>::<span class='op'>&lt;</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>typename</span><span class='op'>&gt;</span>(<span class='ident'>sender</span>));
-            <span class='kw'>match</span> <span class='ident'>receiver</span>.<span class='ident'>recv</span>().<span class='ident'>unwrap</span>() {
+        <span class='kw'>pub</span> <span class='kw'>unsafe</span> <span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> <span class='kw'>fn</span> <span class='ident'>ts3plugin_init</span>() <span class='op'>-&gt;</span> <span class='ident'>c_int</span> {
+            <span class='kw'>match</span> <span class='macro-nonterminal'>$</span><span class='kw'>crate</span>::<span class='macro-nonterminal'>ts3interface</span>::<span class='ident'>private_init</span>::<span class='op'>&lt;</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>typename</span><span class='op'>&gt;</span>() {
                 <span class='prelude-val'>Ok</span>(_) <span class='op'>=&gt;</span> <span class='number'>0</span>,
                 <span class='prelude-val'>Err</span>(<span class='macro-nonterminal'>$</span><span class='kw'>crate</span>::<span class='macro-nonterminal'>InitError</span>::<span class='ident'>Failure</span>) <span class='op'>=&gt;</span> <span class='number'>1</span>,
                 <span class='prelude-val'>Err</span>(<span class='macro-nonterminal'>$</span><span class='kw'>crate</span>::<span class='macro-nonterminal'>InitError</span>::<span class='ident'>FailureNoMessage</span>) <span class='op'>=&gt;</span> <span class='op'>-</span><span class='number'>2</span>,

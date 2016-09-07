@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-0' class='srclink' href='../src/ts3plugin/src/lib.rs.html#1-655' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-0' class='srclink' href='../src/ts3plugin/src/lib.rs.html#1-723' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>A crate to create TeamSpeak3 plugins.</p>
 
 <h1 id='example' class='section-header'><a href='#example'>Example</a></h1>
@@ -64,7 +64,7 @@
 <span class='kw'>struct</span> <span class='ident'>MyTsPlugin</span>;
 
 <span class='kw'>impl</span> <span class='ident'>Plugin</span> <span class='kw'>for</span> <span class='ident'>MyTsPlugin</span> {
-    <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='ident'>TsApi</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>Box</span><span class='op'>&lt;</span><span class='ident'>MyTsPlugin</span><span class='op'>&gt;</span>, <span class='ident'>InitError</span><span class='op'>&gt;</span> {
+    <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>TsApi</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>Box</span><span class='op'>&lt;</span><span class='ident'>MyTsPlugin</span><span class='op'>&gt;</span>, <span class='ident'>InitError</span><span class='op'>&gt;</span> {
         <span class='ident'>api</span>.<span class='ident'>log_or_print</span>(<span class='string'>&quot;Inited&quot;</span>, <span class='string'>&quot;MyTsPlugin&quot;</span>, <span class='ident'>LogLevel</span>::<span class='ident'>Info</span>);
         <span class='prelude-val'>Ok</span>(<span class='ident'>Box</span>::<span class='ident'>new</span>(<span class='ident'>MyTsPlugin</span>))
         <span class='comment'>// Or return Err(InitError::Failure) on failure</span>
@@ -72,7 +72,7 @@
 
     <span class='comment'>// Implement callbacks here</span>
 
-    <span class='kw'>fn</span> <span class='ident'>shutdown</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='ident'>TsApi</span>) {
+    <span class='kw'>fn</span> <span class='ident'>shutdown</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='ident'>api</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>TsApi</span>) {
         <span class='ident'>api</span>.<span class='ident'>log_or_print</span>(<span class='string'>&quot;Shutdown&quot;</span>, <span class='string'>&quot;MyTsPlugin&quot;</span>, <span class='ident'>LogLevel</span>::<span class='ident'>Info</span>);
     }
 }
@@ -102,8 +102,8 @@
                        </tr></table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
 <table>
                        <tr class=' module-item'>
-                           <td><a class='macro' href='macro.create_plugin!.html'
-                                  title='ts3plugin::create_plugin!'>create_plugin!</a></td>
+                           <td><a class='macro' href='macro.create_plugin.html'
+                                  title='ts3plugin::create_plugin'>create_plugin</a></td>
                            <td class='docblock short'>
                                 <p>Create a plugin. This macro has to be called once per library to create the
 function interface that is used by TeamSpeak.</p>
@@ -128,7 +128,7 @@ function interface that is used by TeamSpeak.</p>
                            <td><a class='struct' href='struct.ChannelId.html'
                                   title='ts3plugin::ChannelId'>ChannelId</a></td>
                            <td class='docblock short'>
-                                
+                                <p>A wrapper for a channel id.</p>
                            </td>
                        </tr>
                        <tr class=' module-item'>
@@ -142,7 +142,7 @@ function interface that is used by TeamSpeak.</p>
                            <td><a class='struct' href='struct.ConnectionId.html'
                                   title='ts3plugin::ConnectionId'>ConnectionId</a></td>
                            <td class='docblock short'>
-                                
+                                <p>A wrapper for a connection id.</p>
                            </td>
                        </tr>
                        <tr class=' module-item'>
@@ -200,7 +200,7 @@ are passed along with his id.</p>
                            <td><a class='struct' href='struct.Permissions.html'
                                   title='ts3plugin::Permissions'>Permissions</a></td>
                            <td class='docblock short'>
-                                
+                                <p>Permissions - TODO not yet implemented</p>
                            </td>
                        </tr>
                        <tr class=' module-item'>
@@ -221,7 +221,7 @@ are passed along with his id.</p>
                            <td><a class='struct' href='struct.ServerId.html'
                                   title='ts3plugin::ServerId'>ServerId</a></td>
                            <td class='docblock short'>
-                                
+                                <p>A wrapper for a server id.</p>
                            </td>
                        </tr>
                        <tr class=' module-item'>
@@ -242,7 +242,7 @@ are passed along with his id.</p>
                            <td><a class='struct' href='struct.TsApi.html'
                                   title='ts3plugin::TsApi'>TsApi</a></td>
                            <td class='docblock short'>
-                                
+                                <p>The main struct that contains all permanently save data.</p>
                            </td>
                        </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
@@ -257,7 +257,8 @@ are passed along with his id.</p>
                            <td><a class='enum' href='enum.MessageReceiver.html'
                                   title='ts3plugin::MessageReceiver'>MessageReceiver</a></td>
                            <td class='docblock short'>
-                                
+                                <p>The possible receivers of a message. A message can be sent to a specific
+connection, to the current channel chat or to the server chat.</p>
                            </td>
                        </tr></table></section>
     <section id='search' class="content hidden"></section>
